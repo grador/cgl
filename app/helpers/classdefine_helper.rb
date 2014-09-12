@@ -1,0 +1,3 @@
+module ClassdefineHelper
+
+end

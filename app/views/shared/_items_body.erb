@@ -1,0 +1,13 @@
+<table class="tbody">
+  <% @items.each do |i|%>
+      <tr>
+        <td class="id"><%= i.id %></td>
+        <td class="name"><%= i.name %></td>
+        <td class="full"><%= i.full %></td>
+        <td class="art"><%= i.art %></td>
+        <td class="box"><%= i.box %></td>
+        <td class="status"><%= i.status %></td>
+        <td class="symbol"><%= link_to 'Просмотр', i %></td>
+      </tr>
+  <% end %>
+</table>

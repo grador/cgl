@@ -1,0 +1,21 @@
+<div class="page_header">
+  <h1>K отгрузке заказов: <%= @orders.size %>.</h1>
+  Дата отгрузки: <%=@active_date%> <br/>
+  Маршрут No <%=current_user[:region]%>; <br/>
+  Экспедитор (имя, ID): <%=current_user[:name]%>, <%=current_user[:id]%>;
+</div>
+<div class="page_nav">
+  <ul>
+    <li class="button"> <%= link_to 'Посмотреть отгрузки', action: 'view' %> </li>
+    <li class="button"> <%= link_to_if( @active_date.today? &&!(@orders.nil? || @orders.empty?),'Сформировать отгрузку', new_expedition_path )%></li>
+  </ul>
+</div>
+<div id="orderInExShow">
+    <% if @orders.nil? || @orders.empty?  %>
+        <h2>Нет в базе заказов на отгузку по вашему маршруту!</h2>
+    <% else%>
+      <% cache do %>
+        <%= render partial: 'shared/expedition_header', locals: { orders: @orders, users_name: @users_name} %>
+      <% end %>
+    <% end %>
+</div>

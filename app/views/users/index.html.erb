@@ -1,0 +1,26 @@
+<% if @users.nil? %>
+    <h1> Нет в базе пользователей ! </h1>
+<% else %>
+   <h2>Раздел пользователи. Зарегистрировано: <%= @users.size %> пользователей.</h2>
+   <div id="userList">
+     <div class="thead">
+       <%= render :partial => 'shared/users_head'%>
+     </div>
+     <div class="tbodyshort">
+       <%= render :partial => 'shared/users_body'%>
+     </div>
+   </div>
+<% end %>
+<% if @items.nil? %>
+    <b> Нет в базе изделий ! </b>
+<% else %>
+    <h2>Раздел изделия. В базе: <%= @items.size %> изделий.</h2>
+    <div id="itemList">
+      <div class="thead">
+        <%= render :partial => 'shared/items_head'%>
+      </div>
+      <div class="tbodyshort">
+        <%= render :partial => 'shared/items_body'%>
+      </div>
+    </div>
+<% end %>

@@ -1,0 +1,67 @@
+
+#+ orders +
+#+ application +
+#+ errors +
+#+ expeditions +
+#+ items +
+#+ sessions +
+#+ users +
+#+ причесать все модели +
+#+ мэйлер +
+#+ mail +
+#+ errors +
+#+ items +
+#+ orders +
+#+ expeditions +
+#+ layouts +
+#+ sessions +
+#+ shared +
+#+ users ширина полей new & show +
+#+ разобраться с _item_head +
+#+ session_index +
+#+ aplication +
+#+ make scrolling order/view +
+#+ сделать в order/index вывод имени заказчика с фильтрацией кому что показывать +
+#+ проверки..+
+#+ изменить скроллинг итого+
+#+ expeditions+
+#+ order/show+
+#+ фон таблицы, проверить со скр и без+
+#+ убрать все из контроллеров+
+#+ проверки ввода количества у заказчика и прав доступа тестера +
+#+ выплывает меню+
+#+ TODO Rspec +factory_girl PRIVATE testing @a.send(:name)
+#+ Rspec модели +
+    orders +
+    expeditions+
+    items+
+    loadups+
+    lots+
+    users+
+    make_string+
+    make_xlsx+
+    some_class_method+
+#+ Rspec контроллеры +
+    application+
+    expeditions+
+    items+
+    orders+
+    sessions+
+    users+
+#+ разобраться с роутингом, почему идут exeptions стр. 133 книги на русском
+#+ поставить SASS+
+#+ разобраться с jquery, почему на некоторых страницах не работает с первого захода
+#+ переделать меню оно дб сначала видимо и Java его убирает, при наведении меняется размер
+#+ разобраться почему в линк предупреждения о пути к файлам. книга на русском стр.148 в конце
+#+ кеширование стр 124 книги на русском
+#+ тексты help
+# CAPISTRANO !!!!!!!!!!!!!!!
+
+# TODO java. стр.161 аякс
+# TODO мессенджер и отчеты
+# использовать еще один уровень паршалов построчный стр.155
+
+
+новое прилоение
+postgresql
+https://github.com/sferik/rails_admin

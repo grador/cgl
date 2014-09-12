@@ -1,0 +1,13 @@
+<h1>Введите название и описание полотенец</h1>
+<%= form_for @item do |f| %>
+   <% k=0 %>
+   <%= render partial: 'shared/item_form', locals: { f: f } %>
+   <%= f.fields_for 'lots_attributes', :index => k do |l|%>
+        <%= l.hidden_field(:order_id, :value=> nil ) %>
+        <%= l.hidden_field(:quantity, :value=> nil) %>
+   <% end %>
+    <ul class="form_nav">
+      <li class="button"> <%= f.submit 'Сохранить'%> </li>
+      <li class="button"> <%= link_to 'Отменить', controller: 'users', action: 'index' %> </li>
+    </ul>
+<%end%>

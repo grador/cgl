@@ -1,0 +1,11 @@
+<% if @items.nil? %>
+    <b> Нет в базе изделий ! </b>
+<% else %>
+    <div id="itemList">
+      <h1>Раздел изделия. В базе: <%= @items.size %> изделий.</h1>
+      <%= render :partial => 'shared/items_head'%>
+      <div class="tbodylong">
+        <%= render :partial => 'shared/items_body'%>
+      </div>
+    </div>
+<% end %>

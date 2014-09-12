@@ -1,0 +1,15 @@
+<table>
+  <% @lots.each do |i|%>
+    <% if i.item %>
+        <tr style="background-color: <%= i.item.bg_color %>">
+          <td class="name"><%= i.item[:name] %></td>
+          <td class="art"><%= i.item[:art] %></td>
+          <td class="name"><%= i.item[:box] %></td>
+          <td class="name"><%= i.quantity %></td>
+        </tr>
+    <% end %>
+  <% end %>
+  <% if @lots.size< TBODY_LONG %>
+      <%= render :partial => 'shared/order_footer'%>
+  <% end %>
+</table>

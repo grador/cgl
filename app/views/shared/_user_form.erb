@@ -1,0 +1,38 @@
+    <table>
+      <tr>
+        <td class="formname">Имя:</td>
+        <td><%= f.text_field :name, size: FULL_FIELD %></td>
+      </tr>
+      <tr>
+        <td class="formname">E-mail:</td>
+        <td><%= f.text_field :email, size: EMAIL_FIELD %></td>
+      </tr>
+      <tr>
+        <td class="formname">Адрес:</td>
+        <td><%= f.text_field :address, size: FULL_FIELD %></td>
+      </tr>
+      <tr>
+        <td class="formname">Номер маршрута (1...99)</td>
+        <td><%= f.text_field :region, size: BOX_FIELD %></td>
+      </tr>
+      <tr>
+        <td class="formname">Тип пользователя:</td>
+        <td>
+          <%= f.radio_button :type_owner, USER %>
+          <%= f.label 'User' %><%= f.radio_button :type_owner, EXPEDITOR %>
+          <%= f.label 'Expeditor' %>
+          <%= f.radio_button :type_owner, ADMIN %>
+          <%= f.label 'Admin' %>
+          <%= f.radio_button :type_owner, TESTER %>
+          <%= f.label 'Tester' %>
+        </td>
+      </tr>
+      <tr>
+        <td class="formname">Пароль:</td>
+        <td><%= f.password_field :password, value: ''%></td>
+      </tr>
+      <tr>
+        <td class="formname">Подтвердить пароль:</td>
+        <td><%= f.password_field :password_confirmation %></td>
+      </tr>
+    </table>

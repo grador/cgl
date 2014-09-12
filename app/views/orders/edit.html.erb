@@ -1,0 +1,3 @@
+<h1>Отредактируйте заказ</h1>
+<p>Номер заказа: <%= @order.id %></p>
+<%= render partial: 'shared/order_form', locals: { :order => @order, :lots => @lots} %>

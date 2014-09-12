@@ -1,0 +1,14 @@
+<div id="entrance">
+    <h1>Вход</h1>
+    <%= form_tag sessions_path do %>
+      <p>
+        Имя <br/>
+        <%= text_field_tag :email, params[:email], size: EMAIL_FIELD %>
+      </p>
+      <p>
+        Пароль<br/>
+        <%= password_field_tag :password %>
+      </p>
+      <p class="button"><%= submit_tag 'Ввод' %></p>
+    <% end %>
+</div>

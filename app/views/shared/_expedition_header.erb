@@ -1,0 +1,39 @@
+  <div class="thead">
+    <table class="thead">
+      <tr>
+        <td class="status"> No </td>
+        <td class="full"> Получатель </td>
+        <td class="art"> Кол-во мест </td>
+        <td class="club"> Время размещения </td>
+      </tr>
+    </table>
+  </div>
+  <% if action_name=='new' %>
+     <% heigh = TBODY; tt = 'tbody' %>
+  <% else %>
+      <% heigh = TBODY_LONG; tt = 'tbodylong' %>
+  <% end %>
+  <div class=<%= tt %>>
+      <table class="tbodyw">
+          <% k=0 %>
+          <% @orders.each do |i|%>
+              <tr>
+                <td class="status"><%= i.id %></td>
+                <td class="full"><%= i.user_name(@users_name) %></td>
+                <td class="art"><%= i.q_box %></td>
+                <td class="club"><%= i.updated_at %></td>
+              </tr>
+              <% k+=i.q_box %>
+          <% end %>
+          <% if @orders.size< heigh %>
+              <%= render :partial => 'shared/expedition_footer', locals: {:k => k}%>
+          <% end %>
+        </table>
+  </div>
+  <% unless @orders.size< heigh %>
+      <div class="thead">
+        <table class="thead">
+          <%= render :partial => 'shared/expedition_footer', locals: {:k => k}%>
+        </table>
+      </div>
+  <% end %>

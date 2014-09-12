@@ -1,0 +1,3 @@
+module ExpeditionsHelper
+
+end

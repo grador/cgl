@@ -1,0 +1,38 @@
+<h1>Атрибуты пользователя</h1>
+<table>
+  <tr>
+    <td class="formname">Номер:</td>
+    <td class="formfield"><%= @user.id %></td>
+  </tr>
+  <tr>
+    <td class="formname">Имя:</td>
+    <td class="formfield"><%= @user.name %></td>
+  </tr>
+  <tr>
+    <td class="formname">E-mail:</td>
+    <td class="formfield"><%= @user.email%></td>
+  </tr>
+  <tr>
+    <td class="formname">Адрес:</td>
+    <td class="formfield"><%= @user.address %></td>
+  </tr>
+  <tr>
+    <td class="formname">Маршрут:</td>
+    <td class="formfield"><%= @user.region %></td>
+  </tr>
+  <tr>
+    <td class="formname">Тип:</td>
+    <td class="formfield"><%= @user.type_owner %></td>
+  </tr>
+  <tr>
+    <td class="formname">Статус:</td>
+    <td class="formfield"><%= @user.status %></td>
+  </tr>
+</table>
+<ul class="form_nav">
+    <li class="button"><%= link_to 'Редактировать', edit_user_path(@user) %></li>
+    <li class="button">
+      <%= link_to @user.name_action , user_path(@user), method: :delete %>
+    </li>
+    <li class="button"><%= link_to 'Весь список', action: 'index' %></li>
+</ul>

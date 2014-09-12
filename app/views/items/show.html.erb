@@ -1,0 +1,28 @@
+<h1>Атрибуты изделия</h1>
+<table>
+  <tr>
+    <td class="formname">Название краткое:</td>
+    <td class="formfield" style="background-color: <%= @item.bg_color %>"><%= @item.name %></td>
+  </tr>
+  <tr>
+    <td class="formname">Название полное:</td>
+    <td class="formfield"><%= @item.full %></td>
+  </tr>
+  <tr>
+    <td class="formname">Артикул:</td>
+    <td class="formfield"><%= @item.art %></td>
+  </tr>
+  <tr>
+    <td class="formname">Транспортная норма:</td>
+    <td class="formfield"><%= @item.box %></td>
+  </tr>
+  <tr>
+    <td class="formname">Статус:</td>
+    <td class="formfield"><%= @item.status %></td>
+  </tr>
+</table>
+<ul class="form_nav">
+    <li class="button"><%= link_to 'Редактировать', edit_item_path(@item) %></li>
+    <li class="button"><%= link_to @item.name_action, item_path(@item), method: :delete %></li>
+    <li class="button"><%= link_to 'Весь список',controller: 'users', action: 'index' %></li>
+</ul>

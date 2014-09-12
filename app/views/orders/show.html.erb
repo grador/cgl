@@ -1,0 +1,25 @@
+<div class="page_header">
+      <h1>Атрибуты заказа:</h1>
+      <p>Номер заказа: <%= @order.id %></p>
+      <p>Дата исполнения: <%= @order.deliver_at %></p>
+      <p>Состав заказа:</p>
+</div>
+<div class="page_nav">
+  <ul>
+    <li class="button"><%= link_to 'Повторить', copy_order_path(@order) %> </li>
+    <li class="button"><%= link_to_unless(@order.order_delivered?, 'Редактировать', edit_order_path(@order)) %></li>
+    <li class="button"><%= link_to_unless(@order.order_delivered?, 'Удалить', order_path(@order), method: :delete, data: { confirm: 'Удалить? Вы уверены?'} )%></li>
+    <li class="button"><%= link_to 'Весь список', action: 'index' %></li>
+  </ul>
+</div>
+<div id="orderShow">
+        <%= render :partial => 'shared/order_head'%>
+<div class="tbodylong">
+    <%= render :partial => 'shared/order_body'%>
+</div>
+    <% unless @lots.size< TBODY_LONG %>
+             <table class="thead">
+                <%= render :partial => 'shared/order_footer'%>
+             </table>
+    <% end %>
+</div>

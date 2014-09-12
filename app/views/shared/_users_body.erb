@@ -1,0 +1,13 @@
+<table class="tbody">
+    <% @users.each do |u|%>
+    <tr>
+      <td class="id"><%= u.id %></td>
+      <td class="mail"><%= u.email %></td>
+      <td class="club"><%= u.name %></td>
+      <td class="status"><%= u.type_owner %></td>
+      <td class="addr"><%= u.address %></td>
+      <td class="status"><%= u.region %></td>
+      <td class="status"><%= u.status %></td>
+      <td class="symbol"><%= link_to 'Просмотр', u %></td>
+    <% end %>
+</table>

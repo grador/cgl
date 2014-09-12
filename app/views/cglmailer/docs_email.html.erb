@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Вам направлена накладная No <%= @bill_number %> </br>
+    на получение от <%= FIRM_NAME %> ТМЦ.</h1>
+<p>
+  Она прикреплена к письму в виде exel-файла <%= @file_name %>
+</p>
+<p>
+  Для входа на сайт перейдите по адресу: <%= SITE_URL %>.
+</p>
+<p>Успешной работы!</p></br>
+<p>С уважением, Генеральный директор <%= FIRM_NAME %> </p></br>
+</body>
+</html>

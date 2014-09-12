@@ -1,0 +1,59 @@
+<div class="page_header">
+<h2> Дата отгрузки: <%= @waybill[:take_aboard]%></h2>
+   Маршрут No <%=current_user[:region]%>; <br/>
+   Экспедитор (имя, ID): <%=current_user[:name]%>, <%=current_user[:id]%>;
+  <h2>K отгрузке: <%= @orders.size %> заказов.</h2>
+</div>
+<%= form_for @waybill do |w| %>
+    <div class="page_nav" >
+      <ul>
+      <li class="button"> <%= link_to 'Посмотреть отгрузки', action: 'view' %> </li>
+      <li class="button"><%= link_to 'Отменить', action: 'index' %></li>
+      <li class="button"> <%= w.submit 'Сохранить отгрузку'%> </li>
+          </ul>
+    </div>
+    <div id="orderInExShow">
+        <%= render partial: 'shared/expedition_header' %>
+    </div>
+    <%= w.hidden_field(:user_id, :value=> @waybill[:user_id] ) %>
+    <%= w.hidden_field(:take_aboard, :value=> @waybill[:take_aboard] ) %>
+    <%= w.hidden_field(:region, :value=> @waybill[:region] ) %>
+    <%= w.hidden_field(:delivered, :value=> Date.today ) %>
+    <%= w.hidden_field(:amount_boxes, :value=> @waybill[:amount_boxes] ) %>
+    <div id="orderShow">
+        <h2> Готовим накладную на получение изделий и накладные на доставку </h2>
+        <%= render partial: 'shared/order_head' %>
+        <div class="tbodyshort">
+          <table class="tbodyw">
+                <% k=0 %>
+                <% @items.each do |i|%>
+                    <tr>
+                        <td class="name"><%= i.name %></td>
+                        <td class="art"><%= i.art %></td>
+                        <td class="name"><%= i.box %></td>
+                        <td class="name"><%= i.technic %></td>
+                        <%= w.fields_for 'loadups_attributes', :index => k do |l|%>
+                            <%= l.hidden_field(:item_id, :value => i.id ) %>
+                            <%= l.hidden_field(:user_id, :value => @waybill[:user_id] ) %>
+                            <%= l.hidden_field(:quantity, :value => i.technic ) %>
+                            <%= l.hidden_field(:q_box, :value => i.box ) %>
+                            <%= l.hidden_field(:take_aboard, :value => Date.today ) %>
+                            <%= l.hidden_field(:region, :value => @waybill[:region] ) %>
+                        <% end %>
+                    </tr>
+                    <% k+=1 %>
+                <% end %>
+                <% if @items.size< TBODY_SHORT %>
+                    <%= render :partial => 'shared/item_footer', locals: {:waybill => @waybill}%>
+                <% end %>
+          </table>
+        </div>
+        <% unless @items.size< TBODY_SHORT %>
+            <div class="thead">
+              <table class="thead">
+                <%= render :partial => 'shared/item_footer', locals: {:waybill => @waybill}%>
+              </table>
+            </div>
+        <% end %>
+    </div>
+<%end%>

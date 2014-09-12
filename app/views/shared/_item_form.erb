@@ -1,0 +1,22 @@
+<table>
+    <tr>
+      <td class="formname">Название краткое:</td>
+      <td><%= f.text_field :name, size: NAME_FIELD %></td>
+    </tr>
+    <tr>
+      <td class="formname">Название полное:</td>
+      <td><%= f.text_field :full, size: FULL_FIELD %></td>
+    </tr>
+    <tr>
+      <td class="formname">Артикул:</td>
+      <td><%= f.text_field :art, size: ART_FIELD  %></td>
+    </tr>
+    <tr>
+      <td class="formname">Транспортная норма:</td>
+      <td><%= f.text_field :box, size: BOX_FIELD  %></td>
+    </tr>
+    <tr>
+      <td><%= f.radio_button :num, ACTIVE %><%= f.label 'Открыть доступ' %></td>
+      <td><%= f.radio_button :num, INACTIVE %><%= f.label 'Закрыть доступ' %></td>
+    </tr>
+</table>

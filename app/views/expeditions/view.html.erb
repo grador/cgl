@@ -1,0 +1,43 @@
+<div class="page_header">
+  <h1>Список последних отгрузок</h1>
+  Экспедитор (имя, ID): <%=current_user[:name]%>, <%=current_user[:id]%>
+</div>
+<div class="page_nav">
+  <ul>
+  <li class="button"><%= link_to 'Заказы к отгрузке', action: 'index' %></li>
+      </ul>
+</div>
+<div id="expShow">
+    <% if @waybills.empty? %>
+        <b> Нет в базе ваших отгрузок! </b>
+    <% else%>
+        <div class="thead">
+            <table class="thead">
+               <tr>
+                    <td class="status"> No накл.</td>
+                    <td class="status"> Маршрут </td>
+                    <td class="date"> Заказано на </td>
+                    <td class="date"> Отгружено </td>
+                    <td class="date"> Количество мест </td>
+                    <td class="art"> Статус </td>
+               </tr>
+            </table>
+        </div>
+        <div class="tbodylong">
+          <% cache do %>
+            <table class="tbodyw">
+                <% @waybills.each do |i|%>
+                <tr>
+                    <td class="status"><%= i.id %></td>
+                    <td class="status"><%= i.region %></td>
+                    <td class="date"><%= i.take_aboard %></td>
+                    <td class="date"><%= i.in_time? %></td>
+                    <td class="date"><%= i.amount_boxes %></td>
+                    <td class="art"><%= i.name_status %></td>
+                </tr>
+                <% end %>
+            </table>
+          <% end %>
+        </div>
+    <% end %>
+</div>

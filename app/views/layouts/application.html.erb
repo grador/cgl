@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Call Goodluck</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag 'favicon.ico'%>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div id="top">
+      <span id="call"> www.callgoodluck.ru </span>
+      ООО УДАЧА. <%= show_username %>
+    </div>
+    <div class="main_nav">
+      <% if current_user %>
+          <p id="sticker">
+            <span id="chword">ОТКРЫТЬ</span>
+            <br/>
+            МЕНЮ
+          </p>
+          <div id="help">
+            <% t = "public/help/#{controller.controller_name}.html" %>
+            <% if File.exist?(t) %>
+                <%= render file: t %>
+            <% else %>
+                <p>Текст руководства пользователя недоступен, сообщите администратору о возникшей проблеме!</p>
+            <% end %>
+          </div>
+          <%= render partial: 'shared/main_menu'%>
+        </div>
+        <div class="main_box">
+          <div class="informer">
+            <% flash.each do |name, msg| %>
+                <h2> <%= content_tag :div, msg, :id => "flash_#{name}" %></h2>
+            <% end %>
+          </div>
+          <% if is_messages %>
+             <h2> У Вас <%= is_messages %> новых сообщений. </h2>
+          <% end %>
+      <% end %>
+      <%= yield %>
+    </div>
+    <div id="footer">grador.ru</div>
+</body>
+</html>
