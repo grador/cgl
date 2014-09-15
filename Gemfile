@@ -7,6 +7,8 @@ gem 'rails', '4.1.5'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+gem 'yaml_db'
+
 # Use SCSS for stylesheets
 gem 'sass-rails'
 gem 'sass'
@@ -32,14 +34,13 @@ gem 'jbuilder'
 group :development, :test do
 	gem 'rspec-rails'
   gem 'factory_girl_rails'
-end
-group :test do
   gem 'faker'
   gem 'capybara'
   gem 'guard-rspec'
   gem 'launchy'
   gem 'timecop'
 end
+
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
