@@ -15,7 +15,7 @@ module MakeXlsx
 
   def make_waybill_docs(waybill, orders)
     return false unless make_xlsx_file(waybill, waybill.loadups.includes(:item))
-    orders.each {|o| p o; return false unless make_xlsx_file(o, o.lots.includes(:item))}
+    orders.each {|o| return false unless make_xlsx_file(o, o.lots.includes(:item))}
     true
   end
 

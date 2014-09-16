@@ -59,9 +59,9 @@
 
 # подготовка приложения к production
 
-# выгрузка данных
-# установка mysql
-# загрузка начальных данных
+#+ выгрузка данных
+#+ установка mysql
+#+ загрузка начальных данных
 # Подготовка VPN VDN
 # CAPISTRANO !!!!!!!!!!!!!!!
 # deploy
@@ -74,5 +74,3 @@
 новое прилоение
 postgresql
 https://github.com/sferik/rails_admin
-
- ~/.dropbox-dist/dropboxd

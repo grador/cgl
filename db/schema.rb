@@ -24,10 +24,10 @@ ActiveRecord::Schema.define(version: 20140625142621) do
     t.integer  "amount_boxes"
   end
 
-  add_index "expeditions", ["delivered"], name: "index_expeditions_on_delivered"
-  add_index "expeditions", ["region"], name: "index_expeditions_on_region"
-  add_index "expeditions", ["take_aboard"], name: "index_expeditions_on_take_aboard"
-  add_index "expeditions", ["user_id"], name: "index_expeditions_on_user_id"
+  add_index "expeditions", ["delivered"], name: "index_expeditions_on_delivered", using: :btree
+  add_index "expeditions", ["region"], name: "index_expeditions_on_region", using: :btree
+  add_index "expeditions", ["take_aboard"], name: "index_expeditions_on_take_aboard", using: :btree
+  add_index "expeditions", ["user_id"], name: "index_expeditions_on_user_id", using: :btree
 
   create_table "items", force: true do |t|
     t.string   "name"
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 20140625142621) do
     t.integer  "technic"
   end
 
-  add_index "items", ["art"], name: "index_items_on_art"
-  add_index "items", ["name"], name: "index_items_on_name"
+  add_index "items", ["art"], name: "index_items_on_art", using: :btree
+  add_index "items", ["name"], name: "index_items_on_name", using: :btree
 
   create_table "loadups", force: true do |t|
     t.integer  "item_id"
@@ -56,11 +56,11 @@ ActiveRecord::Schema.define(version: 20140625142621) do
     t.integer  "expedition_id"
   end
 
-  add_index "loadups", ["expedition_id"], name: "index_loadups_on_expedition_id"
-  add_index "loadups", ["item_id"], name: "index_loadups_on_item_id"
-  add_index "loadups", ["region"], name: "index_loadups_on_region"
-  add_index "loadups", ["take_aboard"], name: "index_loadups_on_take_aboard"
-  add_index "loadups", ["user_id"], name: "index_loadups_on_user_id"
+  add_index "loadups", ["expedition_id"], name: "index_loadups_on_expedition_id", using: :btree
+  add_index "loadups", ["item_id"], name: "index_loadups_on_item_id", using: :btree
+  add_index "loadups", ["region"], name: "index_loadups_on_region", using: :btree
+  add_index "loadups", ["take_aboard"], name: "index_loadups_on_take_aboard", using: :btree
+  add_index "loadups", ["user_id"], name: "index_loadups_on_user_id", using: :btree
 
   create_table "lots", force: true do |t|
     t.integer  "item_id"
@@ -70,8 +70,8 @@ ActiveRecord::Schema.define(version: 20140625142621) do
     t.datetime "updated_at"
   end
 
-  add_index "lots", ["item_id"], name: "index_lots_on_item_id"
-  add_index "lots", ["order_id"], name: "index_lots_on_order_id"
+  add_index "lots", ["item_id"], name: "index_lots_on_item_id", using: :btree
+  add_index "lots", ["order_id"], name: "index_lots_on_order_id", using: :btree
 
   create_table "orders", force: true do |t|
     t.integer  "user_id"
@@ -85,11 +85,11 @@ ActiveRecord::Schema.define(version: 20140625142621) do
     t.datetime "updated_at"
   end
 
-  add_index "orders", ["deliver_at"], name: "index_orders_on_deliver_at"
-  add_index "orders", ["delivered"], name: "index_orders_on_delivered"
-  add_index "orders", ["expeditor"], name: "index_orders_on_expeditor"
-  add_index "orders", ["region"], name: "index_orders_on_region"
-  add_index "orders", ["user_id"], name: "index_orders_on_user_id"
+  add_index "orders", ["deliver_at"], name: "index_orders_on_deliver_at", using: :btree
+  add_index "orders", ["delivered"], name: "index_orders_on_delivered", using: :btree
+  add_index "orders", ["expeditor"], name: "index_orders_on_expeditor", using: :btree
+  add_index "orders", ["region"], name: "index_orders_on_region", using: :btree
+  add_index "orders", ["user_id"], name: "index_orders_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email"
@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(version: 20140625142621) do
     t.string   "type_owner"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email"
-  add_index "users", ["region"], name: "index_users_on_region"
+  add_index "users", ["email"], name: "index_users_on_email", using: :btree
+  add_index "users", ["region"], name: "index_users_on_region", using: :btree
 
 end

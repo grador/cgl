@@ -2,12 +2,14 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 # gem 'rails', '4.0.1'
-gem 'rails', '4.1.5'
+gem 'rails', '4.1.6'
 
+# Use mysql as the database for Active Record
+gem 'mysql2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# gem 'sqlite3'
 
-gem 'yaml_db'
+gem 'yaml_db', github: 'jetthoughts/yaml_db', ref: 'fb4b6bd7e12de3cffa93e0a298a1e5253d7e92ba'
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
