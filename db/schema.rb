@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625142621) do
+ActiveRecord::Schema.define(version: 20140919015547) do
 
   create_table "expeditions", force: true do |t|
     t.integer  "user_id"
@@ -73,6 +73,15 @@ ActiveRecord::Schema.define(version: 20140625142621) do
   add_index "lots", ["item_id"], name: "index_lots_on_item_id", using: :btree
   add_index "lots", ["order_id"], name: "index_lots_on_order_id", using: :btree
 
+  create_table "messages", force: true do |t|
+    t.string   "name"
+    t.string   "body"
+    t.string   "status"
+    t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "orders", force: true do |t|
     t.integer  "user_id"
     t.date     "deliver_at"
@@ -90,6 +99,40 @@ ActiveRecord::Schema.define(version: 20140625142621) do
   add_index "orders", ["expeditor"], name: "index_orders_on_expeditor", using: :btree
   add_index "orders", ["region"], name: "index_orders_on_region", using: :btree
   add_index "orders", ["user_id"], name: "index_orders_on_user_id", using: :btree
+
+  create_table "reports", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "inspect_id"
+    t.date     "data_begin"
+    t.date     "data_end"
+    t.integer  "q_box",      default: 0
+    t.integer  "quantity",   default: 0
+    t.string   "status"
+    t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sendmen", force: true do |t|
+    t.integer  "message_id"
+    t.integer  "user_id"
+    t.integer  "receiver"
+    t.string   "status"
+    t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "slotereports", force: true do |t|
+    t.integer  "report_id"
+    t.integer  "item_id"
+    t.integer  "quantity",   default: 0
+    t.integer  "q_box",      default: 0
+    t.string   "satatus"
+    t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email"

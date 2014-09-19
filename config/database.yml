@@ -51,4 +51,6 @@ test:
 #
 production:
   <<: *default
+  username: cgl
+  password: +79857627132qwe
   database: Cgl_production
