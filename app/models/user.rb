@@ -20,6 +20,12 @@ class User < ActiveRecord::Base
   has_many :loadups
   accepts_nested_attributes_for :loadups, reject_if: lambda {
       |attributes| attributes['quantity'].blank? || attributes['quantity'] == '0'|| attributes['quantity'] ==0}
+  has_many :sendmen
+  accepts_nested_attributes_for :sendmen, allow_destroy: true
+  has_many :reports
+  accepts_nested_attributes_for :reports, allow_destroy: true
+  accepts_nested_attributes_for :reports, reject_if: lambda {
+      |attributes| attributes['quantity'].blank? || attributes['quantity'] == '0'|| attributes['quantity'] ==0}
 
   # Модуль интерпретаторов данных для некоторых классов
   include MakeStringItemUser
