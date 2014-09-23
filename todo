@@ -75,3 +75,22 @@
 postgresql
 https://github.com/sferik/rails_admin
 
+require 'rvm/capistrano'
+require 'bundler/capistrano'
+
+ssh_options[:forward_agent] = true
+set :rvm_ruby_string, '1.9.3-p392@repo_name'
+
+set :application, "Application name"
+set :repository,  "git@github.com:github_username/repo_name.git"
+set :default_stage, "production"
+# set :stages, %w(production)
+set :use_sudo, false
+set :user, 'deploy' # нужно предварительно создать юзера на сервере, юзать root'a не стоит
+set :scm, :git
+set :normalize_asset_timestamps, false
+
+set :rails_env, 'production'
+set :branch, 'master'
+set :deploy_to, "/home/server_username/APP_NAME"
+server 'SERVER_IP', :web, :app, :db, :primary => true

@@ -4,21 +4,25 @@
     <data-source source="LOCAL" name="Rails cgl: development" uuid="3bbd1a5e-3b07-4375-a1f6-d0453427f59f">
       <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://127.0.0.1/railsdb</jdbc-url>
-      <user-name>railsuser</user-name>
-      <user-password>dfd8dfcbdfc3dfc6dfd9dfdadfcbdfd9dfd9</user-password>
+      <jdbc-url>jdbc:mysql://127.0.0.1/Cgl_development</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>df9ddf93df9bdf9cdf9bdf9ddf9bdf9cdf9edf9cdf9a</user-password>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails cgl: test" uuid="140b9a47-21c6-41a7-b7ae-fd1466e91779">
       <driver-ref>sqlite.xerial</driver-ref>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/Cgl_test</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>df9ddf93df9bdf9cdf9bdf9ddf9bdf9cdf9edf9cdf9a</user-password>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails cgl: production" uuid="9ed496df-2474-45bc-be9e-7f071885b3b6">
       <driver-ref>sqlite.xerial</driver-ref>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/production.sqlite3</jdbc-url>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/cgldb</jdbc-url>
+      <user-name>cgldb_usr</user-name>
+      <user-password>df9ddf93df92df9fdf9ddf9cdf98df9ddf9bdf99df98dfdbdfdddfcf</user-password>
       <libraries />
     </data-source>
   </component>

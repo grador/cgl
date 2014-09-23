@@ -42,6 +42,11 @@ group :development, :test do
   gem 'launchy'
   gem 'timecop'
 end
+# Deploy with Capistrano
+group :development do
+  gem 'capistrano'
+  gem 'rvm-capistrano' # нужен для корректной работы с rvm
+end
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', :require => 'bcrypt'
