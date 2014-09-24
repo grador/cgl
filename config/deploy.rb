@@ -42,6 +42,7 @@ namespace :deploy do
   task :stop do ; end
   namespace :assets do
     task :precompile, :roles => assets_role, :except => { :no_release => true } do
+	run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
       run <<-CMD.compact
         cd -- #{latest_release.shellescape} &&
         #{rake} RAILS_ENV=#{rails_env.to_s.shellescape} #{asset_env} assets:precompile
@@ -56,3 +57,6 @@ namespace :deploy do
 # if you want to clean up old releases on each deploy uncomment this:
   after "deploy", "deploy:cleanup"
 end
+
+executing "cd -- /var/www/callgoodluckcom/releases/20140924134326 && bundle exec rake RAILS_ENV=production RAILS_GROUPS=assets assets:precompile"
+
