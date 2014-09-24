@@ -24,6 +24,14 @@ server "31.131.20.142", :web, :app, :db, :primary => true
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
+desc "Symlink shared config files"
+task :symlink_config_files do
+    run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
+end
+desc "Restart Passenger app"
+task :restart do
+    run "#{ try_sudo } touch #{ File.join(current_path, 'tmp', 'restart.txt') }"
+end
 
 # if you"re still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
@@ -35,7 +43,8 @@ namespace :deploy do
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,"tmp","restart.txt")}"
   end
+  after "deploy", "deploy:symlink_config_files"
   after "deploy", "deploy:restart"
 # if you want to clean up old releases on each deploy uncomment this:
-  after "deploy:restart", "deploy:cleanup"
+  after "deploy", "deploy:cleanup"
 end
