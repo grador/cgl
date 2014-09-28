@@ -2,8 +2,9 @@ require 'rvm/capistrano'
 require 'bundler/capistrano'
 set :ssh_options, {:forward_agent => true}
 set :rvm_type, :system
-# set :rvm_ruby_string, "1.9.3-p392@repo_name"
+set :rvm_ruby_string, "ruby 2.1.3@default"
 set :application, "Cgl"
+set :domain, "callgoodluck.com"
 set :repository, "https://github.com/grador/cgl/"
 set :default_stage, "production"
 # set :stages, %w(production)
@@ -12,13 +13,13 @@ set :user, "root" # нужно предварительно создать юз�
 # set :group, "deployers"
 set :scm, :git
 set :normalize_asset_timestamps, false
-
+set :scm_verbose, true
 set :rails_env, "production"
 set :branch, "master"
 set :deploy_to, "/var/www/callgoodluckcom"
-set :deploy_via, :copy
+set :deploy_via, :remote_cache
 set :keep_releases, 3
-default_run_options[:pty] = true
+# default_run_options[:pty] = true
 server "31.131.20.142", :web, :app, :db, :primary => true
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
@@ -57,3 +58,8 @@ namespace :deploy do
   after "deploy", "deploy:cleanup"
 end
 
+after "deploy:update_code", :bundle_install
+desc "install the necessary prerequisites"
+task :bundle_install, :roles => :app do
+  run "cd #{release_path} && bundle install"
+end
