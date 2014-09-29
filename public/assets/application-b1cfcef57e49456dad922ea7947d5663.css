@@ -1,0 +1,446 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+body {
+  background-color: #e8e8f2;
+  font-family: Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  margin: 3px;
+  font: 150% sans-serif;
+  color: #660c24; }
+
+h2 {
+  padding-top: 2px;
+  margin: 3px;
+  font: 150% sans-serif;
+  color: #660c24; }
+
+h3 {
+  padding-top: 1em;
+  margin: 3px;
+  font: 120% sans-serif;
+  color: #660c24; }
+
+#top {
+  background-color: rgba(198, 103, 115, 0.78);
+  width: 100%;
+  height: 20px;
+  color: #e8e8f2;
+  padding-top: 4px;
+  font-size: 16px;
+  padding-left: 220px; }
+  #top #call {
+    position: absolute;
+    left: 10px; }
+
+#sticker {
+  position: relative;
+  background: #cfe0e1;
+  border: 1px solid #caccc3;
+  width: 75px;
+  text-align: center;
+  padding-right: 2px;
+  color: #660c24;
+  left: -78px; }
+
+#help {
+  position: absolute;
+  left: -220px;
+  padding-top: 10px;
+  width: 220px; }
+
+#entrance {
+  position: absolute;
+  left: 300px;
+  top: 150px; }
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  clear: both;
+  width: 100%;
+  height: 18px;
+  color: #e8e8f2;
+  background: rgba(198, 103, 115, 0.78) repeat-x;
+  text-align: center;
+  padding-top: 2px; }
+
+.present {
+  display: block; }
+
+.empty {
+  display: none; }
+
+.main_nav {
+  float: left;
+  width: 220px; }
+  .main_nav ul.menu {
+    position: relative;
+    left: -46px;
+    padding-top: 10px; }
+    .main_nav ul.menu li {
+      font-size: 16px;
+      color: #660c24;
+      height: 26px;
+      padding-top: 9px;
+      border: 1px solid #e8e8f2;
+      text-align: center;
+      background: #cfe0e1;
+      width: 180px;
+      margin: 0; }
+      .main_nav ul.menu li a {
+        text-decoration: none;
+        text-decoration-color: rgba(91, 39, 121, 0.82); }
+      .main_nav ul.menu li a:visited {
+        color: rgba(91, 39, 121, 0.82); }
+      .main_nav ul.menu li a:hover {
+        color: #876edb; }
+      .main_nav ul.menu li a:active {
+        color: #ff7fdb; }
+    .main_nav ul.menu li#sticker {
+      width: 216px; }
+
+.main_box {
+  padding-left: 235px; }
+  .main_box .informer {
+    width: 100%;
+    height: 2em;
+    text-decoration: double;
+    overflow-y: auto;
+    background: #e8e8f2; }
+  .main_box .page_nav {
+    padding-left: 500px; }
+    .main_box .page_nav ul {
+      list-style: none; }
+      .main_box .page_nav ul li.button {
+        Height: 2em;
+        list-style: none; }
+        .main_box .page_nav ul li.button a {
+          text-decoration-color: rgba(91, 39, 121, 0.82); }
+        .main_box .page_nav ul li.button a:visited {
+          color: rgba(91, 39, 121, 0.82); }
+        .main_box .page_nav ul li.button a:hover {
+          color: #876edb; }
+        .main_box .page_nav ul li.button a:active {
+          color: #ff7fdb; }
+  .main_box ul.form_nav {
+    padding-left: 50px;
+    list-style: none; }
+    .main_box ul.form_nav li.button {
+      Height: 2em;
+      list-style: none; }
+      .main_box ul.form_nav li.button a {
+        text-decoration-color: rgba(91, 39, 121, 0.82); }
+      .main_box ul.form_nav li.button a:visited {
+        color: rgba(91, 39, 121, 0.82); }
+      .main_box ul.form_nav li.button a:hover {
+        color: #876edb; }
+      .main_box ul.form_nav li.button a:active {
+        color: #ff7fdb; }
+  .main_box .page_header {
+    width: 30em;
+    float: left; }
+  .main_box table {
+    border-collapse: collapse; }
+    .main_box table tr td {
+      border: 1px solid #caccc3;
+      padding-left: 5px;
+      padding-right: 5px; }
+    .main_box table tr td.formname {
+      width: 15em;
+      background: #cfe0e1; }
+    .main_box table tr td.formfield {
+      width: 35em;
+      background: #f1f1f5; }
+    .main_box table tr td.id {
+      width: 25px; }
+    .main_box table tr td.name {
+      width: 235px; }
+    .main_box table tr td.full {
+      width: 375px; }
+    .main_box table tr td.art {
+      width: 110px; }
+    .main_box table tr td.box {
+      width: 30px; }
+    .main_box table tr td.status {
+      width: 65px; }
+    .main_box table tr td.mail {
+      width: 170px; }
+    .main_box table tr td.addr {
+      width: 230px; }
+    .main_box table tr td.club {
+      width: 210px; }
+    .main_box table tr td.date {
+      width: 140px; }
+    .main_box table tr td.symbol {
+      width: 85px;
+      font-size: small;
+      text-align: center; }
+  .main_box #userList {
+    width: 1024px; }
+  .main_box #itemList {
+    width: 1024px; }
+  .main_box #itemShortList {
+    height: 25em;
+    overflow: auto;
+    width: 1024px; }
+  .main_box #orderList {
+    width: 970px; }
+  .main_box #orderShow {
+    width: 875px;
+    float: left; }
+  .main_box #expShow {
+    width: 745px;
+    float: left; }
+  .main_box #orderInExShow {
+    width: 820px;
+    float: left; }
+  .main_box #userList table.thead, .main_box #itemList table.thead, .main_box #itemShortList table.thead, .main_box #orderList table.thead,
+  .main_box #orderShow table.thead, .main_box #expShow table.thead, .main_box #orderInExShow table.thead {
+    border-collapse: collapse; }
+    .main_box #userList table.thead tr, .main_box #itemList table.thead tr, .main_box #itemShortList table.thead tr, .main_box #orderList table.thead tr,
+    .main_box #orderShow table.thead tr, .main_box #expShow table.thead tr, .main_box #orderInExShow table.thead tr {
+      background: #cfe0e1; }
+      .main_box #userList table.thead tr td, .main_box #itemList table.thead tr td, .main_box #itemShortList table.thead tr td, .main_box #orderList table.thead tr td,
+      .main_box #orderShow table.thead tr td, .main_box #expShow table.thead tr td, .main_box #orderInExShow table.thead tr td {
+        background: #cfe0e1;
+        text-align: center;
+        border: 1px solid #caccc3;
+        padding-left: 5px;
+        padding-right: 5px; }
+      .main_box #userList table.thead tr td.formname, .main_box #itemList table.thead tr td.formname, .main_box #itemShortList table.thead tr td.formname, .main_box #orderList table.thead tr td.formname,
+      .main_box #orderShow table.thead tr td.formname, .main_box #expShow table.thead tr td.formname, .main_box #orderInExShow table.thead tr td.formname {
+        width: 15em;
+        background: #cfe0e1; }
+      .main_box #userList table.thead tr td.formfield, .main_box #itemList table.thead tr td.formfield, .main_box #itemShortList table.thead tr td.formfield, .main_box #orderList table.thead tr td.formfield,
+      .main_box #orderShow table.thead tr td.formfield, .main_box #expShow table.thead tr td.formfield, .main_box #orderInExShow table.thead tr td.formfield {
+        width: 35em;
+        background: #f1f1f5; }
+      .main_box #userList table.thead tr td.id, .main_box #itemList table.thead tr td.id, .main_box #itemShortList table.thead tr td.id, .main_box #orderList table.thead tr td.id,
+      .main_box #orderShow table.thead tr td.id, .main_box #expShow table.thead tr td.id, .main_box #orderInExShow table.thead tr td.id {
+        width: 25px; }
+      .main_box #userList table.thead tr td.name, .main_box #itemList table.thead tr td.name, .main_box #itemShortList table.thead tr td.name, .main_box #orderList table.thead tr td.name,
+      .main_box #orderShow table.thead tr td.name, .main_box #expShow table.thead tr td.name, .main_box #orderInExShow table.thead tr td.name {
+        width: 235px; }
+      .main_box #userList table.thead tr td.full, .main_box #itemList table.thead tr td.full, .main_box #itemShortList table.thead tr td.full, .main_box #orderList table.thead tr td.full,
+      .main_box #orderShow table.thead tr td.full, .main_box #expShow table.thead tr td.full, .main_box #orderInExShow table.thead tr td.full {
+        width: 375px; }
+      .main_box #userList table.thead tr td.art, .main_box #itemList table.thead tr td.art, .main_box #itemShortList table.thead tr td.art, .main_box #orderList table.thead tr td.art,
+      .main_box #orderShow table.thead tr td.art, .main_box #expShow table.thead tr td.art, .main_box #orderInExShow table.thead tr td.art {
+        width: 110px; }
+      .main_box #userList table.thead tr td.box, .main_box #itemList table.thead tr td.box, .main_box #itemShortList table.thead tr td.box, .main_box #orderList table.thead tr td.box,
+      .main_box #orderShow table.thead tr td.box, .main_box #expShow table.thead tr td.box, .main_box #orderInExShow table.thead tr td.box {
+        width: 30px; }
+      .main_box #userList table.thead tr td.status, .main_box #itemList table.thead tr td.status, .main_box #itemShortList table.thead tr td.status, .main_box #orderList table.thead tr td.status,
+      .main_box #orderShow table.thead tr td.status, .main_box #expShow table.thead tr td.status, .main_box #orderInExShow table.thead tr td.status {
+        width: 65px; }
+      .main_box #userList table.thead tr td.mail, .main_box #itemList table.thead tr td.mail, .main_box #itemShortList table.thead tr td.mail, .main_box #orderList table.thead tr td.mail,
+      .main_box #orderShow table.thead tr td.mail, .main_box #expShow table.thead tr td.mail, .main_box #orderInExShow table.thead tr td.mail {
+        width: 170px; }
+      .main_box #userList table.thead tr td.addr, .main_box #itemList table.thead tr td.addr, .main_box #itemShortList table.thead tr td.addr, .main_box #orderList table.thead tr td.addr,
+      .main_box #orderShow table.thead tr td.addr, .main_box #expShow table.thead tr td.addr, .main_box #orderInExShow table.thead tr td.addr {
+        width: 230px; }
+      .main_box #userList table.thead tr td.club, .main_box #itemList table.thead tr td.club, .main_box #itemShortList table.thead tr td.club, .main_box #orderList table.thead tr td.club,
+      .main_box #orderShow table.thead tr td.club, .main_box #expShow table.thead tr td.club, .main_box #orderInExShow table.thead tr td.club {
+        width: 210px; }
+      .main_box #userList table.thead tr td.date, .main_box #itemList table.thead tr td.date, .main_box #itemShortList table.thead tr td.date, .main_box #orderList table.thead tr td.date,
+      .main_box #orderShow table.thead tr td.date, .main_box #expShow table.thead tr td.date, .main_box #orderInExShow table.thead tr td.date {
+        width: 140px; }
+      .main_box #userList table.thead tr td.symbol, .main_box #itemList table.thead tr td.symbol, .main_box #itemShortList table.thead tr td.symbol, .main_box #orderList table.thead tr td.symbol,
+      .main_box #orderShow table.thead tr td.symbol, .main_box #expShow table.thead tr td.symbol, .main_box #orderInExShow table.thead tr td.symbol {
+        width: 85px;
+        font-size: small;
+        text-align: center; }
+  .main_box #userList .tbodyw, .main_box #itemList .tbodyw, .main_box #itemShortList .tbodyw, .main_box #orderList .tbodyw,
+  .main_box #orderShow .tbodyw, .main_box #expShow .tbodyw, .main_box #orderInExShow .tbodyw {
+    overflow-y: auto;
+    text-align: left; }
+  .main_box #userList .tbody, .main_box #itemList .tbody, .main_box #itemShortList .tbody, .main_box #orderList .tbody,
+  .main_box #orderShow .tbody, .main_box #expShow .tbody, .main_box #orderInExShow .tbody {
+    overflow-y: auto;
+    height: 7em;
+    text-align: left; }
+  .main_box #userList .tbodyshort, .main_box #itemList .tbodyshort, .main_box #itemShortList .tbodyshort, .main_box #orderList .tbodyshort,
+  .main_box #orderShow .tbodyshort, .main_box #expShow .tbodyshort, .main_box #orderInExShow .tbodyshort {
+    overflow-y: auto;
+    height: 14em;
+    text-align: left; }
+  .main_box #userList .tbodylong, .main_box #itemList .tbodylong, .main_box #itemShortList .tbodylong, .main_box #orderList .tbodylong,
+  .main_box #orderShow .tbodylong, .main_box #expShow .tbodylong, .main_box #orderInExShow .tbodylong {
+    overflow-y: auto;
+    height: 23em;
+    text-align: left; }
+  .main_box #userList .tbody table.tbody, .main_box #userList .tbody table.tbodyw, .main_box #userList .tbodyshort table.tbody, .main_box #userList .tbodyshort table.tbodyw, .main_box #userList .tbodylong table.tbody, .main_box #userList .tbodylong table.tbodyw, .main_box #userList .tbodyw table.tbody, .main_box #userList .tbodyw table.tbodyw, .main_box #itemList .tbody table.tbody, .main_box #itemList .tbody table.tbodyw, .main_box #itemList .tbodyshort table.tbody, .main_box #itemList .tbodyshort table.tbodyw, .main_box #itemList .tbodylong table.tbody, .main_box #itemList .tbodylong table.tbodyw, .main_box #itemList .tbodyw table.tbody, .main_box #itemList .tbodyw table.tbodyw, .main_box #itemShortList .tbody table.tbody, .main_box #itemShortList .tbody table.tbodyw, .main_box #itemShortList .tbodyshort table.tbody, .main_box #itemShortList .tbodyshort table.tbodyw, .main_box #itemShortList .tbodylong table.tbody, .main_box #itemShortList .tbodylong table.tbodyw, .main_box #itemShortList .tbodyw table.tbody, .main_box #itemShortList .tbodyw table.tbodyw, .main_box #orderList .tbody table.tbody, .main_box #orderList .tbody table.tbodyw, .main_box #orderList .tbodyshort table.tbody, .main_box #orderList .tbodyshort table.tbodyw, .main_box #orderList .tbodylong table.tbody, .main_box #orderList .tbodylong table.tbodyw, .main_box #orderList .tbodyw table.tbody, .main_box #orderList .tbodyw table.tbodyw,
+  .main_box #orderShow .tbody table.tbody,
+  .main_box #orderShow .tbody table.tbodyw,
+  .main_box #orderShow .tbodyshort table.tbody,
+  .main_box #orderShow .tbodyshort table.tbodyw,
+  .main_box #orderShow .tbodylong table.tbody,
+  .main_box #orderShow .tbodylong table.tbodyw,
+  .main_box #orderShow .tbodyw table.tbody,
+  .main_box #orderShow .tbodyw table.tbodyw, .main_box #expShow .tbody table.tbody, .main_box #expShow .tbody table.tbodyw, .main_box #expShow .tbodyshort table.tbody, .main_box #expShow .tbodyshort table.tbodyw, .main_box #expShow .tbodylong table.tbody, .main_box #expShow .tbodylong table.tbodyw, .main_box #expShow .tbodyw table.tbody, .main_box #expShow .tbodyw table.tbodyw, .main_box #orderInExShow .tbody table.tbody, .main_box #orderInExShow .tbody table.tbodyw, .main_box #orderInExShow .tbodyshort table.tbody, .main_box #orderInExShow .tbodyshort table.tbodyw, .main_box #orderInExShow .tbodylong table.tbody, .main_box #orderInExShow .tbodylong table.tbodyw, .main_box #orderInExShow .tbodyw table.tbody, .main_box #orderInExShow .tbodyw table.tbodyw {
+    background: #f1f1f5;
+    border-collapse: collapse; }
+    .main_box #userList .tbody table.tbody tr td, .main_box #userList .tbody table.tbodyw tr td, .main_box #userList .tbodyshort table.tbody tr td, .main_box #userList .tbodyshort table.tbodyw tr td, .main_box #userList .tbodylong table.tbody tr td, .main_box #userList .tbodylong table.tbodyw tr td, .main_box #userList .tbodyw table.tbody tr td, .main_box #userList .tbodyw table.tbodyw tr td, .main_box #itemList .tbody table.tbody tr td, .main_box #itemList .tbody table.tbodyw tr td, .main_box #itemList .tbodyshort table.tbody tr td, .main_box #itemList .tbodyshort table.tbodyw tr td, .main_box #itemList .tbodylong table.tbody tr td, .main_box #itemList .tbodylong table.tbodyw tr td, .main_box #itemList .tbodyw table.tbody tr td, .main_box #itemList .tbodyw table.tbodyw tr td, .main_box #itemShortList .tbody table.tbody tr td, .main_box #itemShortList .tbody table.tbodyw tr td, .main_box #itemShortList .tbodyshort table.tbody tr td, .main_box #itemShortList .tbodyshort table.tbodyw tr td, .main_box #itemShortList .tbodylong table.tbody tr td, .main_box #itemShortList .tbodylong table.tbodyw tr td, .main_box #itemShortList .tbodyw table.tbody tr td, .main_box #itemShortList .tbodyw table.tbodyw tr td, .main_box #orderList .tbody table.tbody tr td, .main_box #orderList .tbody table.tbodyw tr td, .main_box #orderList .tbodyshort table.tbody tr td, .main_box #orderList .tbodyshort table.tbodyw tr td, .main_box #orderList .tbodylong table.tbody tr td, .main_box #orderList .tbodylong table.tbodyw tr td, .main_box #orderList .tbodyw table.tbody tr td, .main_box #orderList .tbodyw table.tbodyw tr td,
+    .main_box #orderShow .tbody table.tbody tr td,
+    .main_box #orderShow .tbody table.tbodyw tr td,
+    .main_box #orderShow .tbodyshort table.tbody tr td,
+    .main_box #orderShow .tbodyshort table.tbodyw tr td,
+    .main_box #orderShow .tbodylong table.tbody tr td,
+    .main_box #orderShow .tbodylong table.tbodyw tr td,
+    .main_box #orderShow .tbodyw table.tbody tr td,
+    .main_box #orderShow .tbodyw table.tbodyw tr td, .main_box #expShow .tbody table.tbody tr td, .main_box #expShow .tbody table.tbodyw tr td, .main_box #expShow .tbodyshort table.tbody tr td, .main_box #expShow .tbodyshort table.tbodyw tr td, .main_box #expShow .tbodylong table.tbody tr td, .main_box #expShow .tbodylong table.tbodyw tr td, .main_box #expShow .tbodyw table.tbody tr td, .main_box #expShow .tbodyw table.tbodyw tr td, .main_box #orderInExShow .tbody table.tbody tr td, .main_box #orderInExShow .tbody table.tbodyw tr td, .main_box #orderInExShow .tbodyshort table.tbody tr td, .main_box #orderInExShow .tbodyshort table.tbodyw tr td, .main_box #orderInExShow .tbodylong table.tbody tr td, .main_box #orderInExShow .tbodylong table.tbodyw tr td, .main_box #orderInExShow .tbodyw table.tbody tr td, .main_box #orderInExShow .tbodyw table.tbodyw tr td {
+      background: #f1f1f5;
+      text-align: left;
+      border: 1px solid #caccc3;
+      padding-left: 5px;
+      padding-right: 5px; }
+    .main_box #userList .tbody table.tbody tr td.formname, .main_box #userList .tbody table.tbodyw tr td.formname, .main_box #userList .tbodyshort table.tbody tr td.formname, .main_box #userList .tbodyshort table.tbodyw tr td.formname, .main_box #userList .tbodylong table.tbody tr td.formname, .main_box #userList .tbodylong table.tbodyw tr td.formname, .main_box #userList .tbodyw table.tbody tr td.formname, .main_box #userList .tbodyw table.tbodyw tr td.formname, .main_box #itemList .tbody table.tbody tr td.formname, .main_box #itemList .tbody table.tbodyw tr td.formname, .main_box #itemList .tbodyshort table.tbody tr td.formname, .main_box #itemList .tbodyshort table.tbodyw tr td.formname, .main_box #itemList .tbodylong table.tbody tr td.formname, .main_box #itemList .tbodylong table.tbodyw tr td.formname, .main_box #itemList .tbodyw table.tbody tr td.formname, .main_box #itemList .tbodyw table.tbodyw tr td.formname, .main_box #itemShortList .tbody table.tbody tr td.formname, .main_box #itemShortList .tbody table.tbodyw tr td.formname, .main_box #itemShortList .tbodyshort table.tbody tr td.formname, .main_box #itemShortList .tbodyshort table.tbodyw tr td.formname, .main_box #itemShortList .tbodylong table.tbody tr td.formname, .main_box #itemShortList .tbodylong table.tbodyw tr td.formname, .main_box #itemShortList .tbodyw table.tbody tr td.formname, .main_box #itemShortList .tbodyw table.tbodyw tr td.formname, .main_box #orderList .tbody table.tbody tr td.formname, .main_box #orderList .tbody table.tbodyw tr td.formname, .main_box #orderList .tbodyshort table.tbody tr td.formname, .main_box #orderList .tbodyshort table.tbodyw tr td.formname, .main_box #orderList .tbodylong table.tbody tr td.formname, .main_box #orderList .tbodylong table.tbodyw tr td.formname, .main_box #orderList .tbodyw table.tbody tr td.formname, .main_box #orderList .tbodyw table.tbodyw tr td.formname,
+    .main_box #orderShow .tbody table.tbody tr td.formname,
+    .main_box #orderShow .tbody table.tbodyw tr td.formname,
+    .main_box #orderShow .tbodyshort table.tbody tr td.formname,
+    .main_box #orderShow .tbodyshort table.tbodyw tr td.formname,
+    .main_box #orderShow .tbodylong table.tbody tr td.formname,
+    .main_box #orderShow .tbodylong table.tbodyw tr td.formname,
+    .main_box #orderShow .tbodyw table.tbody tr td.formname,
+    .main_box #orderShow .tbodyw table.tbodyw tr td.formname, .main_box #expShow .tbody table.tbody tr td.formname, .main_box #expShow .tbody table.tbodyw tr td.formname, .main_box #expShow .tbodyshort table.tbody tr td.formname, .main_box #expShow .tbodyshort table.tbodyw tr td.formname, .main_box #expShow .tbodylong table.tbody tr td.formname, .main_box #expShow .tbodylong table.tbodyw tr td.formname, .main_box #expShow .tbodyw table.tbody tr td.formname, .main_box #expShow .tbodyw table.tbodyw tr td.formname, .main_box #orderInExShow .tbody table.tbody tr td.formname, .main_box #orderInExShow .tbody table.tbodyw tr td.formname, .main_box #orderInExShow .tbodyshort table.tbody tr td.formname, .main_box #orderInExShow .tbodyshort table.tbodyw tr td.formname, .main_box #orderInExShow .tbodylong table.tbody tr td.formname, .main_box #orderInExShow .tbodylong table.tbodyw tr td.formname, .main_box #orderInExShow .tbodyw table.tbody tr td.formname, .main_box #orderInExShow .tbodyw table.tbodyw tr td.formname {
+      width: 15em;
+      background: #cfe0e1; }
+    .main_box #userList .tbody table.tbody tr td.formfield, .main_box #userList .tbody table.tbodyw tr td.formfield, .main_box #userList .tbodyshort table.tbody tr td.formfield, .main_box #userList .tbodyshort table.tbodyw tr td.formfield, .main_box #userList .tbodylong table.tbody tr td.formfield, .main_box #userList .tbodylong table.tbodyw tr td.formfield, .main_box #userList .tbodyw table.tbody tr td.formfield, .main_box #userList .tbodyw table.tbodyw tr td.formfield, .main_box #itemList .tbody table.tbody tr td.formfield, .main_box #itemList .tbody table.tbodyw tr td.formfield, .main_box #itemList .tbodyshort table.tbody tr td.formfield, .main_box #itemList .tbodyshort table.tbodyw tr td.formfield, .main_box #itemList .tbodylong table.tbody tr td.formfield, .main_box #itemList .tbodylong table.tbodyw tr td.formfield, .main_box #itemList .tbodyw table.tbody tr td.formfield, .main_box #itemList .tbodyw table.tbodyw tr td.formfield, .main_box #itemShortList .tbody table.tbody tr td.formfield, .main_box #itemShortList .tbody table.tbodyw tr td.formfield, .main_box #itemShortList .tbodyshort table.tbody tr td.formfield, .main_box #itemShortList .tbodyshort table.tbodyw tr td.formfield, .main_box #itemShortList .tbodylong table.tbody tr td.formfield, .main_box #itemShortList .tbodylong table.tbodyw tr td.formfield, .main_box #itemShortList .tbodyw table.tbody tr td.formfield, .main_box #itemShortList .tbodyw table.tbodyw tr td.formfield, .main_box #orderList .tbody table.tbody tr td.formfield, .main_box #orderList .tbody table.tbodyw tr td.formfield, .main_box #orderList .tbodyshort table.tbody tr td.formfield, .main_box #orderList .tbodyshort table.tbodyw tr td.formfield, .main_box #orderList .tbodylong table.tbody tr td.formfield, .main_box #orderList .tbodylong table.tbodyw tr td.formfield, .main_box #orderList .tbodyw table.tbody tr td.formfield, .main_box #orderList .tbodyw table.tbodyw tr td.formfield,
+    .main_box #orderShow .tbody table.tbody tr td.formfield,
+    .main_box #orderShow .tbody table.tbodyw tr td.formfield,
+    .main_box #orderShow .tbodyshort table.tbody tr td.formfield,
+    .main_box #orderShow .tbodyshort table.tbodyw tr td.formfield,
+    .main_box #orderShow .tbodylong table.tbody tr td.formfield,
+    .main_box #orderShow .tbodylong table.tbodyw tr td.formfield,
+    .main_box #orderShow .tbodyw table.tbody tr td.formfield,
+    .main_box #orderShow .tbodyw table.tbodyw tr td.formfield, .main_box #expShow .tbody table.tbody tr td.formfield, .main_box #expShow .tbody table.tbodyw tr td.formfield, .main_box #expShow .tbodyshort table.tbody tr td.formfield, .main_box #expShow .tbodyshort table.tbodyw tr td.formfield, .main_box #expShow .tbodylong table.tbody tr td.formfield, .main_box #expShow .tbodylong table.tbodyw tr td.formfield, .main_box #expShow .tbodyw table.tbody tr td.formfield, .main_box #expShow .tbodyw table.tbodyw tr td.formfield, .main_box #orderInExShow .tbody table.tbody tr td.formfield, .main_box #orderInExShow .tbody table.tbodyw tr td.formfield, .main_box #orderInExShow .tbodyshort table.tbody tr td.formfield, .main_box #orderInExShow .tbodyshort table.tbodyw tr td.formfield, .main_box #orderInExShow .tbodylong table.tbody tr td.formfield, .main_box #orderInExShow .tbodylong table.tbodyw tr td.formfield, .main_box #orderInExShow .tbodyw table.tbody tr td.formfield, .main_box #orderInExShow .tbodyw table.tbodyw tr td.formfield {
+      width: 35em;
+      background: #f1f1f5; }
+    .main_box #userList .tbody table.tbody tr td.id, .main_box #userList .tbody table.tbodyw tr td.id, .main_box #userList .tbodyshort table.tbody tr td.id, .main_box #userList .tbodyshort table.tbodyw tr td.id, .main_box #userList .tbodylong table.tbody tr td.id, .main_box #userList .tbodylong table.tbodyw tr td.id, .main_box #userList .tbodyw table.tbody tr td.id, .main_box #userList .tbodyw table.tbodyw tr td.id, .main_box #itemList .tbody table.tbody tr td.id, .main_box #itemList .tbody table.tbodyw tr td.id, .main_box #itemList .tbodyshort table.tbody tr td.id, .main_box #itemList .tbodyshort table.tbodyw tr td.id, .main_box #itemList .tbodylong table.tbody tr td.id, .main_box #itemList .tbodylong table.tbodyw tr td.id, .main_box #itemList .tbodyw table.tbody tr td.id, .main_box #itemList .tbodyw table.tbodyw tr td.id, .main_box #itemShortList .tbody table.tbody tr td.id, .main_box #itemShortList .tbody table.tbodyw tr td.id, .main_box #itemShortList .tbodyshort table.tbody tr td.id, .main_box #itemShortList .tbodyshort table.tbodyw tr td.id, .main_box #itemShortList .tbodylong table.tbody tr td.id, .main_box #itemShortList .tbodylong table.tbodyw tr td.id, .main_box #itemShortList .tbodyw table.tbody tr td.id, .main_box #itemShortList .tbodyw table.tbodyw tr td.id, .main_box #orderList .tbody table.tbody tr td.id, .main_box #orderList .tbody table.tbodyw tr td.id, .main_box #orderList .tbodyshort table.tbody tr td.id, .main_box #orderList .tbodyshort table.tbodyw tr td.id, .main_box #orderList .tbodylong table.tbody tr td.id, .main_box #orderList .tbodylong table.tbodyw tr td.id, .main_box #orderList .tbodyw table.tbody tr td.id, .main_box #orderList .tbodyw table.tbodyw tr td.id,
+    .main_box #orderShow .tbody table.tbody tr td.id,
+    .main_box #orderShow .tbody table.tbodyw tr td.id,
+    .main_box #orderShow .tbodyshort table.tbody tr td.id,
+    .main_box #orderShow .tbodyshort table.tbodyw tr td.id,
+    .main_box #orderShow .tbodylong table.tbody tr td.id,
+    .main_box #orderShow .tbodylong table.tbodyw tr td.id,
+    .main_box #orderShow .tbodyw table.tbody tr td.id,
+    .main_box #orderShow .tbodyw table.tbodyw tr td.id, .main_box #expShow .tbody table.tbody tr td.id, .main_box #expShow .tbody table.tbodyw tr td.id, .main_box #expShow .tbodyshort table.tbody tr td.id, .main_box #expShow .tbodyshort table.tbodyw tr td.id, .main_box #expShow .tbodylong table.tbody tr td.id, .main_box #expShow .tbodylong table.tbodyw tr td.id, .main_box #expShow .tbodyw table.tbody tr td.id, .main_box #expShow .tbodyw table.tbodyw tr td.id, .main_box #orderInExShow .tbody table.tbody tr td.id, .main_box #orderInExShow .tbody table.tbodyw tr td.id, .main_box #orderInExShow .tbodyshort table.tbody tr td.id, .main_box #orderInExShow .tbodyshort table.tbodyw tr td.id, .main_box #orderInExShow .tbodylong table.tbody tr td.id, .main_box #orderInExShow .tbodylong table.tbodyw tr td.id, .main_box #orderInExShow .tbodyw table.tbody tr td.id, .main_box #orderInExShow .tbodyw table.tbodyw tr td.id {
+      width: 25px; }
+    .main_box #userList .tbody table.tbody tr td.name, .main_box #userList .tbody table.tbodyw tr td.name, .main_box #userList .tbodyshort table.tbody tr td.name, .main_box #userList .tbodyshort table.tbodyw tr td.name, .main_box #userList .tbodylong table.tbody tr td.name, .main_box #userList .tbodylong table.tbodyw tr td.name, .main_box #userList .tbodyw table.tbody tr td.name, .main_box #userList .tbodyw table.tbodyw tr td.name, .main_box #itemList .tbody table.tbody tr td.name, .main_box #itemList .tbody table.tbodyw tr td.name, .main_box #itemList .tbodyshort table.tbody tr td.name, .main_box #itemList .tbodyshort table.tbodyw tr td.name, .main_box #itemList .tbodylong table.tbody tr td.name, .main_box #itemList .tbodylong table.tbodyw tr td.name, .main_box #itemList .tbodyw table.tbody tr td.name, .main_box #itemList .tbodyw table.tbodyw tr td.name, .main_box #itemShortList .tbody table.tbody tr td.name, .main_box #itemShortList .tbody table.tbodyw tr td.name, .main_box #itemShortList .tbodyshort table.tbody tr td.name, .main_box #itemShortList .tbodyshort table.tbodyw tr td.name, .main_box #itemShortList .tbodylong table.tbody tr td.name, .main_box #itemShortList .tbodylong table.tbodyw tr td.name, .main_box #itemShortList .tbodyw table.tbody tr td.name, .main_box #itemShortList .tbodyw table.tbodyw tr td.name, .main_box #orderList .tbody table.tbody tr td.name, .main_box #orderList .tbody table.tbodyw tr td.name, .main_box #orderList .tbodyshort table.tbody tr td.name, .main_box #orderList .tbodyshort table.tbodyw tr td.name, .main_box #orderList .tbodylong table.tbody tr td.name, .main_box #orderList .tbodylong table.tbodyw tr td.name, .main_box #orderList .tbodyw table.tbody tr td.name, .main_box #orderList .tbodyw table.tbodyw tr td.name,
+    .main_box #orderShow .tbody table.tbody tr td.name,
+    .main_box #orderShow .tbody table.tbodyw tr td.name,
+    .main_box #orderShow .tbodyshort table.tbody tr td.name,
+    .main_box #orderShow .tbodyshort table.tbodyw tr td.name,
+    .main_box #orderShow .tbodylong table.tbody tr td.name,
+    .main_box #orderShow .tbodylong table.tbodyw tr td.name,
+    .main_box #orderShow .tbodyw table.tbody tr td.name,
+    .main_box #orderShow .tbodyw table.tbodyw tr td.name, .main_box #expShow .tbody table.tbody tr td.name, .main_box #expShow .tbody table.tbodyw tr td.name, .main_box #expShow .tbodyshort table.tbody tr td.name, .main_box #expShow .tbodyshort table.tbodyw tr td.name, .main_box #expShow .tbodylong table.tbody tr td.name, .main_box #expShow .tbodylong table.tbodyw tr td.name, .main_box #expShow .tbodyw table.tbody tr td.name, .main_box #expShow .tbodyw table.tbodyw tr td.name, .main_box #orderInExShow .tbody table.tbody tr td.name, .main_box #orderInExShow .tbody table.tbodyw tr td.name, .main_box #orderInExShow .tbodyshort table.tbody tr td.name, .main_box #orderInExShow .tbodyshort table.tbodyw tr td.name, .main_box #orderInExShow .tbodylong table.tbody tr td.name, .main_box #orderInExShow .tbodylong table.tbodyw tr td.name, .main_box #orderInExShow .tbodyw table.tbody tr td.name, .main_box #orderInExShow .tbodyw table.tbodyw tr td.name {
+      width: 235px; }
+    .main_box #userList .tbody table.tbody tr td.full, .main_box #userList .tbody table.tbodyw tr td.full, .main_box #userList .tbodyshort table.tbody tr td.full, .main_box #userList .tbodyshort table.tbodyw tr td.full, .main_box #userList .tbodylong table.tbody tr td.full, .main_box #userList .tbodylong table.tbodyw tr td.full, .main_box #userList .tbodyw table.tbody tr td.full, .main_box #userList .tbodyw table.tbodyw tr td.full, .main_box #itemList .tbody table.tbody tr td.full, .main_box #itemList .tbody table.tbodyw tr td.full, .main_box #itemList .tbodyshort table.tbody tr td.full, .main_box #itemList .tbodyshort table.tbodyw tr td.full, .main_box #itemList .tbodylong table.tbody tr td.full, .main_box #itemList .tbodylong table.tbodyw tr td.full, .main_box #itemList .tbodyw table.tbody tr td.full, .main_box #itemList .tbodyw table.tbodyw tr td.full, .main_box #itemShortList .tbody table.tbody tr td.full, .main_box #itemShortList .tbody table.tbodyw tr td.full, .main_box #itemShortList .tbodyshort table.tbody tr td.full, .main_box #itemShortList .tbodyshort table.tbodyw tr td.full, .main_box #itemShortList .tbodylong table.tbody tr td.full, .main_box #itemShortList .tbodylong table.tbodyw tr td.full, .main_box #itemShortList .tbodyw table.tbody tr td.full, .main_box #itemShortList .tbodyw table.tbodyw tr td.full, .main_box #orderList .tbody table.tbody tr td.full, .main_box #orderList .tbody table.tbodyw tr td.full, .main_box #orderList .tbodyshort table.tbody tr td.full, .main_box #orderList .tbodyshort table.tbodyw tr td.full, .main_box #orderList .tbodylong table.tbody tr td.full, .main_box #orderList .tbodylong table.tbodyw tr td.full, .main_box #orderList .tbodyw table.tbody tr td.full, .main_box #orderList .tbodyw table.tbodyw tr td.full,
+    .main_box #orderShow .tbody table.tbody tr td.full,
+    .main_box #orderShow .tbody table.tbodyw tr td.full,
+    .main_box #orderShow .tbodyshort table.tbody tr td.full,
+    .main_box #orderShow .tbodyshort table.tbodyw tr td.full,
+    .main_box #orderShow .tbodylong table.tbody tr td.full,
+    .main_box #orderShow .tbodylong table.tbodyw tr td.full,
+    .main_box #orderShow .tbodyw table.tbody tr td.full,
+    .main_box #orderShow .tbodyw table.tbodyw tr td.full, .main_box #expShow .tbody table.tbody tr td.full, .main_box #expShow .tbody table.tbodyw tr td.full, .main_box #expShow .tbodyshort table.tbody tr td.full, .main_box #expShow .tbodyshort table.tbodyw tr td.full, .main_box #expShow .tbodylong table.tbody tr td.full, .main_box #expShow .tbodylong table.tbodyw tr td.full, .main_box #expShow .tbodyw table.tbody tr td.full, .main_box #expShow .tbodyw table.tbodyw tr td.full, .main_box #orderInExShow .tbody table.tbody tr td.full, .main_box #orderInExShow .tbody table.tbodyw tr td.full, .main_box #orderInExShow .tbodyshort table.tbody tr td.full, .main_box #orderInExShow .tbodyshort table.tbodyw tr td.full, .main_box #orderInExShow .tbodylong table.tbody tr td.full, .main_box #orderInExShow .tbodylong table.tbodyw tr td.full, .main_box #orderInExShow .tbodyw table.tbody tr td.full, .main_box #orderInExShow .tbodyw table.tbodyw tr td.full {
+      width: 375px; }
+    .main_box #userList .tbody table.tbody tr td.art, .main_box #userList .tbody table.tbodyw tr td.art, .main_box #userList .tbodyshort table.tbody tr td.art, .main_box #userList .tbodyshort table.tbodyw tr td.art, .main_box #userList .tbodylong table.tbody tr td.art, .main_box #userList .tbodylong table.tbodyw tr td.art, .main_box #userList .tbodyw table.tbody tr td.art, .main_box #userList .tbodyw table.tbodyw tr td.art, .main_box #itemList .tbody table.tbody tr td.art, .main_box #itemList .tbody table.tbodyw tr td.art, .main_box #itemList .tbodyshort table.tbody tr td.art, .main_box #itemList .tbodyshort table.tbodyw tr td.art, .main_box #itemList .tbodylong table.tbody tr td.art, .main_box #itemList .tbodylong table.tbodyw tr td.art, .main_box #itemList .tbodyw table.tbody tr td.art, .main_box #itemList .tbodyw table.tbodyw tr td.art, .main_box #itemShortList .tbody table.tbody tr td.art, .main_box #itemShortList .tbody table.tbodyw tr td.art, .main_box #itemShortList .tbodyshort table.tbody tr td.art, .main_box #itemShortList .tbodyshort table.tbodyw tr td.art, .main_box #itemShortList .tbodylong table.tbody tr td.art, .main_box #itemShortList .tbodylong table.tbodyw tr td.art, .main_box #itemShortList .tbodyw table.tbody tr td.art, .main_box #itemShortList .tbodyw table.tbodyw tr td.art, .main_box #orderList .tbody table.tbody tr td.art, .main_box #orderList .tbody table.tbodyw tr td.art, .main_box #orderList .tbodyshort table.tbody tr td.art, .main_box #orderList .tbodyshort table.tbodyw tr td.art, .main_box #orderList .tbodylong table.tbody tr td.art, .main_box #orderList .tbodylong table.tbodyw tr td.art, .main_box #orderList .tbodyw table.tbody tr td.art, .main_box #orderList .tbodyw table.tbodyw tr td.art,
+    .main_box #orderShow .tbody table.tbody tr td.art,
+    .main_box #orderShow .tbody table.tbodyw tr td.art,
+    .main_box #orderShow .tbodyshort table.tbody tr td.art,
+    .main_box #orderShow .tbodyshort table.tbodyw tr td.art,
+    .main_box #orderShow .tbodylong table.tbody tr td.art,
+    .main_box #orderShow .tbodylong table.tbodyw tr td.art,
+    .main_box #orderShow .tbodyw table.tbody tr td.art,
+    .main_box #orderShow .tbodyw table.tbodyw tr td.art, .main_box #expShow .tbody table.tbody tr td.art, .main_box #expShow .tbody table.tbodyw tr td.art, .main_box #expShow .tbodyshort table.tbody tr td.art, .main_box #expShow .tbodyshort table.tbodyw tr td.art, .main_box #expShow .tbodylong table.tbody tr td.art, .main_box #expShow .tbodylong table.tbodyw tr td.art, .main_box #expShow .tbodyw table.tbody tr td.art, .main_box #expShow .tbodyw table.tbodyw tr td.art, .main_box #orderInExShow .tbody table.tbody tr td.art, .main_box #orderInExShow .tbody table.tbodyw tr td.art, .main_box #orderInExShow .tbodyshort table.tbody tr td.art, .main_box #orderInExShow .tbodyshort table.tbodyw tr td.art, .main_box #orderInExShow .tbodylong table.tbody tr td.art, .main_box #orderInExShow .tbodylong table.tbodyw tr td.art, .main_box #orderInExShow .tbodyw table.tbody tr td.art, .main_box #orderInExShow .tbodyw table.tbodyw tr td.art {
+      width: 110px; }
+    .main_box #userList .tbody table.tbody tr td.box, .main_box #userList .tbody table.tbodyw tr td.box, .main_box #userList .tbodyshort table.tbody tr td.box, .main_box #userList .tbodyshort table.tbodyw tr td.box, .main_box #userList .tbodylong table.tbody tr td.box, .main_box #userList .tbodylong table.tbodyw tr td.box, .main_box #userList .tbodyw table.tbody tr td.box, .main_box #userList .tbodyw table.tbodyw tr td.box, .main_box #itemList .tbody table.tbody tr td.box, .main_box #itemList .tbody table.tbodyw tr td.box, .main_box #itemList .tbodyshort table.tbody tr td.box, .main_box #itemList .tbodyshort table.tbodyw tr td.box, .main_box #itemList .tbodylong table.tbody tr td.box, .main_box #itemList .tbodylong table.tbodyw tr td.box, .main_box #itemList .tbodyw table.tbody tr td.box, .main_box #itemList .tbodyw table.tbodyw tr td.box, .main_box #itemShortList .tbody table.tbody tr td.box, .main_box #itemShortList .tbody table.tbodyw tr td.box, .main_box #itemShortList .tbodyshort table.tbody tr td.box, .main_box #itemShortList .tbodyshort table.tbodyw tr td.box, .main_box #itemShortList .tbodylong table.tbody tr td.box, .main_box #itemShortList .tbodylong table.tbodyw tr td.box, .main_box #itemShortList .tbodyw table.tbody tr td.box, .main_box #itemShortList .tbodyw table.tbodyw tr td.box, .main_box #orderList .tbody table.tbody tr td.box, .main_box #orderList .tbody table.tbodyw tr td.box, .main_box #orderList .tbodyshort table.tbody tr td.box, .main_box #orderList .tbodyshort table.tbodyw tr td.box, .main_box #orderList .tbodylong table.tbody tr td.box, .main_box #orderList .tbodylong table.tbodyw tr td.box, .main_box #orderList .tbodyw table.tbody tr td.box, .main_box #orderList .tbodyw table.tbodyw tr td.box,
+    .main_box #orderShow .tbody table.tbody tr td.box,
+    .main_box #orderShow .tbody table.tbodyw tr td.box,
+    .main_box #orderShow .tbodyshort table.tbody tr td.box,
+    .main_box #orderShow .tbodyshort table.tbodyw tr td.box,
+    .main_box #orderShow .tbodylong table.tbody tr td.box,
+    .main_box #orderShow .tbodylong table.tbodyw tr td.box,
+    .main_box #orderShow .tbodyw table.tbody tr td.box,
+    .main_box #orderShow .tbodyw table.tbodyw tr td.box, .main_box #expShow .tbody table.tbody tr td.box, .main_box #expShow .tbody table.tbodyw tr td.box, .main_box #expShow .tbodyshort table.tbody tr td.box, .main_box #expShow .tbodyshort table.tbodyw tr td.box, .main_box #expShow .tbodylong table.tbody tr td.box, .main_box #expShow .tbodylong table.tbodyw tr td.box, .main_box #expShow .tbodyw table.tbody tr td.box, .main_box #expShow .tbodyw table.tbodyw tr td.box, .main_box #orderInExShow .tbody table.tbody tr td.box, .main_box #orderInExShow .tbody table.tbodyw tr td.box, .main_box #orderInExShow .tbodyshort table.tbody tr td.box, .main_box #orderInExShow .tbodyshort table.tbodyw tr td.box, .main_box #orderInExShow .tbodylong table.tbody tr td.box, .main_box #orderInExShow .tbodylong table.tbodyw tr td.box, .main_box #orderInExShow .tbodyw table.tbody tr td.box, .main_box #orderInExShow .tbodyw table.tbodyw tr td.box {
+      width: 30px; }
+    .main_box #userList .tbody table.tbody tr td.status, .main_box #userList .tbody table.tbodyw tr td.status, .main_box #userList .tbodyshort table.tbody tr td.status, .main_box #userList .tbodyshort table.tbodyw tr td.status, .main_box #userList .tbodylong table.tbody tr td.status, .main_box #userList .tbodylong table.tbodyw tr td.status, .main_box #userList .tbodyw table.tbody tr td.status, .main_box #userList .tbodyw table.tbodyw tr td.status, .main_box #itemList .tbody table.tbody tr td.status, .main_box #itemList .tbody table.tbodyw tr td.status, .main_box #itemList .tbodyshort table.tbody tr td.status, .main_box #itemList .tbodyshort table.tbodyw tr td.status, .main_box #itemList .tbodylong table.tbody tr td.status, .main_box #itemList .tbodylong table.tbodyw tr td.status, .main_box #itemList .tbodyw table.tbody tr td.status, .main_box #itemList .tbodyw table.tbodyw tr td.status, .main_box #itemShortList .tbody table.tbody tr td.status, .main_box #itemShortList .tbody table.tbodyw tr td.status, .main_box #itemShortList .tbodyshort table.tbody tr td.status, .main_box #itemShortList .tbodyshort table.tbodyw tr td.status, .main_box #itemShortList .tbodylong table.tbody tr td.status, .main_box #itemShortList .tbodylong table.tbodyw tr td.status, .main_box #itemShortList .tbodyw table.tbody tr td.status, .main_box #itemShortList .tbodyw table.tbodyw tr td.status, .main_box #orderList .tbody table.tbody tr td.status, .main_box #orderList .tbody table.tbodyw tr td.status, .main_box #orderList .tbodyshort table.tbody tr td.status, .main_box #orderList .tbodyshort table.tbodyw tr td.status, .main_box #orderList .tbodylong table.tbody tr td.status, .main_box #orderList .tbodylong table.tbodyw tr td.status, .main_box #orderList .tbodyw table.tbody tr td.status, .main_box #orderList .tbodyw table.tbodyw tr td.status,
+    .main_box #orderShow .tbody table.tbody tr td.status,
+    .main_box #orderShow .tbody table.tbodyw tr td.status,
+    .main_box #orderShow .tbodyshort table.tbody tr td.status,
+    .main_box #orderShow .tbodyshort table.tbodyw tr td.status,
+    .main_box #orderShow .tbodylong table.tbody tr td.status,
+    .main_box #orderShow .tbodylong table.tbodyw tr td.status,
+    .main_box #orderShow .tbodyw table.tbody tr td.status,
+    .main_box #orderShow .tbodyw table.tbodyw tr td.status, .main_box #expShow .tbody table.tbody tr td.status, .main_box #expShow .tbody table.tbodyw tr td.status, .main_box #expShow .tbodyshort table.tbody tr td.status, .main_box #expShow .tbodyshort table.tbodyw tr td.status, .main_box #expShow .tbodylong table.tbody tr td.status, .main_box #expShow .tbodylong table.tbodyw tr td.status, .main_box #expShow .tbodyw table.tbody tr td.status, .main_box #expShow .tbodyw table.tbodyw tr td.status, .main_box #orderInExShow .tbody table.tbody tr td.status, .main_box #orderInExShow .tbody table.tbodyw tr td.status, .main_box #orderInExShow .tbodyshort table.tbody tr td.status, .main_box #orderInExShow .tbodyshort table.tbodyw tr td.status, .main_box #orderInExShow .tbodylong table.tbody tr td.status, .main_box #orderInExShow .tbodylong table.tbodyw tr td.status, .main_box #orderInExShow .tbodyw table.tbody tr td.status, .main_box #orderInExShow .tbodyw table.tbodyw tr td.status {
+      width: 65px; }
+    .main_box #userList .tbody table.tbody tr td.mail, .main_box #userList .tbody table.tbodyw tr td.mail, .main_box #userList .tbodyshort table.tbody tr td.mail, .main_box #userList .tbodyshort table.tbodyw tr td.mail, .main_box #userList .tbodylong table.tbody tr td.mail, .main_box #userList .tbodylong table.tbodyw tr td.mail, .main_box #userList .tbodyw table.tbody tr td.mail, .main_box #userList .tbodyw table.tbodyw tr td.mail, .main_box #itemList .tbody table.tbody tr td.mail, .main_box #itemList .tbody table.tbodyw tr td.mail, .main_box #itemList .tbodyshort table.tbody tr td.mail, .main_box #itemList .tbodyshort table.tbodyw tr td.mail, .main_box #itemList .tbodylong table.tbody tr td.mail, .main_box #itemList .tbodylong table.tbodyw tr td.mail, .main_box #itemList .tbodyw table.tbody tr td.mail, .main_box #itemList .tbodyw table.tbodyw tr td.mail, .main_box #itemShortList .tbody table.tbody tr td.mail, .main_box #itemShortList .tbody table.tbodyw tr td.mail, .main_box #itemShortList .tbodyshort table.tbody tr td.mail, .main_box #itemShortList .tbodyshort table.tbodyw tr td.mail, .main_box #itemShortList .tbodylong table.tbody tr td.mail, .main_box #itemShortList .tbodylong table.tbodyw tr td.mail, .main_box #itemShortList .tbodyw table.tbody tr td.mail, .main_box #itemShortList .tbodyw table.tbodyw tr td.mail, .main_box #orderList .tbody table.tbody tr td.mail, .main_box #orderList .tbody table.tbodyw tr td.mail, .main_box #orderList .tbodyshort table.tbody tr td.mail, .main_box #orderList .tbodyshort table.tbodyw tr td.mail, .main_box #orderList .tbodylong table.tbody tr td.mail, .main_box #orderList .tbodylong table.tbodyw tr td.mail, .main_box #orderList .tbodyw table.tbody tr td.mail, .main_box #orderList .tbodyw table.tbodyw tr td.mail,
+    .main_box #orderShow .tbody table.tbody tr td.mail,
+    .main_box #orderShow .tbody table.tbodyw tr td.mail,
+    .main_box #orderShow .tbodyshort table.tbody tr td.mail,
+    .main_box #orderShow .tbodyshort table.tbodyw tr td.mail,
+    .main_box #orderShow .tbodylong table.tbody tr td.mail,
+    .main_box #orderShow .tbodylong table.tbodyw tr td.mail,
+    .main_box #orderShow .tbodyw table.tbody tr td.mail,
+    .main_box #orderShow .tbodyw table.tbodyw tr td.mail, .main_box #expShow .tbody table.tbody tr td.mail, .main_box #expShow .tbody table.tbodyw tr td.mail, .main_box #expShow .tbodyshort table.tbody tr td.mail, .main_box #expShow .tbodyshort table.tbodyw tr td.mail, .main_box #expShow .tbodylong table.tbody tr td.mail, .main_box #expShow .tbodylong table.tbodyw tr td.mail, .main_box #expShow .tbodyw table.tbody tr td.mail, .main_box #expShow .tbodyw table.tbodyw tr td.mail, .main_box #orderInExShow .tbody table.tbody tr td.mail, .main_box #orderInExShow .tbody table.tbodyw tr td.mail, .main_box #orderInExShow .tbodyshort table.tbody tr td.mail, .main_box #orderInExShow .tbodyshort table.tbodyw tr td.mail, .main_box #orderInExShow .tbodylong table.tbody tr td.mail, .main_box #orderInExShow .tbodylong table.tbodyw tr td.mail, .main_box #orderInExShow .tbodyw table.tbody tr td.mail, .main_box #orderInExShow .tbodyw table.tbodyw tr td.mail {
+      width: 170px; }
+    .main_box #userList .tbody table.tbody tr td.addr, .main_box #userList .tbody table.tbodyw tr td.addr, .main_box #userList .tbodyshort table.tbody tr td.addr, .main_box #userList .tbodyshort table.tbodyw tr td.addr, .main_box #userList .tbodylong table.tbody tr td.addr, .main_box #userList .tbodylong table.tbodyw tr td.addr, .main_box #userList .tbodyw table.tbody tr td.addr, .main_box #userList .tbodyw table.tbodyw tr td.addr, .main_box #itemList .tbody table.tbody tr td.addr, .main_box #itemList .tbody table.tbodyw tr td.addr, .main_box #itemList .tbodyshort table.tbody tr td.addr, .main_box #itemList .tbodyshort table.tbodyw tr td.addr, .main_box #itemList .tbodylong table.tbody tr td.addr, .main_box #itemList .tbodylong table.tbodyw tr td.addr, .main_box #itemList .tbodyw table.tbody tr td.addr, .main_box #itemList .tbodyw table.tbodyw tr td.addr, .main_box #itemShortList .tbody table.tbody tr td.addr, .main_box #itemShortList .tbody table.tbodyw tr td.addr, .main_box #itemShortList .tbodyshort table.tbody tr td.addr, .main_box #itemShortList .tbodyshort table.tbodyw tr td.addr, .main_box #itemShortList .tbodylong table.tbody tr td.addr, .main_box #itemShortList .tbodylong table.tbodyw tr td.addr, .main_box #itemShortList .tbodyw table.tbody tr td.addr, .main_box #itemShortList .tbodyw table.tbodyw tr td.addr, .main_box #orderList .tbody table.tbody tr td.addr, .main_box #orderList .tbody table.tbodyw tr td.addr, .main_box #orderList .tbodyshort table.tbody tr td.addr, .main_box #orderList .tbodyshort table.tbodyw tr td.addr, .main_box #orderList .tbodylong table.tbody tr td.addr, .main_box #orderList .tbodylong table.tbodyw tr td.addr, .main_box #orderList .tbodyw table.tbody tr td.addr, .main_box #orderList .tbodyw table.tbodyw tr td.addr,
+    .main_box #orderShow .tbody table.tbody tr td.addr,
+    .main_box #orderShow .tbody table.tbodyw tr td.addr,
+    .main_box #orderShow .tbodyshort table.tbody tr td.addr,
+    .main_box #orderShow .tbodyshort table.tbodyw tr td.addr,
+    .main_box #orderShow .tbodylong table.tbody tr td.addr,
+    .main_box #orderShow .tbodylong table.tbodyw tr td.addr,
+    .main_box #orderShow .tbodyw table.tbody tr td.addr,
+    .main_box #orderShow .tbodyw table.tbodyw tr td.addr, .main_box #expShow .tbody table.tbody tr td.addr, .main_box #expShow .tbody table.tbodyw tr td.addr, .main_box #expShow .tbodyshort table.tbody tr td.addr, .main_box #expShow .tbodyshort table.tbodyw tr td.addr, .main_box #expShow .tbodylong table.tbody tr td.addr, .main_box #expShow .tbodylong table.tbodyw tr td.addr, .main_box #expShow .tbodyw table.tbody tr td.addr, .main_box #expShow .tbodyw table.tbodyw tr td.addr, .main_box #orderInExShow .tbody table.tbody tr td.addr, .main_box #orderInExShow .tbody table.tbodyw tr td.addr, .main_box #orderInExShow .tbodyshort table.tbody tr td.addr, .main_box #orderInExShow .tbodyshort table.tbodyw tr td.addr, .main_box #orderInExShow .tbodylong table.tbody tr td.addr, .main_box #orderInExShow .tbodylong table.tbodyw tr td.addr, .main_box #orderInExShow .tbodyw table.tbody tr td.addr, .main_box #orderInExShow .tbodyw table.tbodyw tr td.addr {
+      width: 230px; }
+    .main_box #userList .tbody table.tbody tr td.club, .main_box #userList .tbody table.tbodyw tr td.club, .main_box #userList .tbodyshort table.tbody tr td.club, .main_box #userList .tbodyshort table.tbodyw tr td.club, .main_box #userList .tbodylong table.tbody tr td.club, .main_box #userList .tbodylong table.tbodyw tr td.club, .main_box #userList .tbodyw table.tbody tr td.club, .main_box #userList .tbodyw table.tbodyw tr td.club, .main_box #itemList .tbody table.tbody tr td.club, .main_box #itemList .tbody table.tbodyw tr td.club, .main_box #itemList .tbodyshort table.tbody tr td.club, .main_box #itemList .tbodyshort table.tbodyw tr td.club, .main_box #itemList .tbodylong table.tbody tr td.club, .main_box #itemList .tbodylong table.tbodyw tr td.club, .main_box #itemList .tbodyw table.tbody tr td.club, .main_box #itemList .tbodyw table.tbodyw tr td.club, .main_box #itemShortList .tbody table.tbody tr td.club, .main_box #itemShortList .tbody table.tbodyw tr td.club, .main_box #itemShortList .tbodyshort table.tbody tr td.club, .main_box #itemShortList .tbodyshort table.tbodyw tr td.club, .main_box #itemShortList .tbodylong table.tbody tr td.club, .main_box #itemShortList .tbodylong table.tbodyw tr td.club, .main_box #itemShortList .tbodyw table.tbody tr td.club, .main_box #itemShortList .tbodyw table.tbodyw tr td.club, .main_box #orderList .tbody table.tbody tr td.club, .main_box #orderList .tbody table.tbodyw tr td.club, .main_box #orderList .tbodyshort table.tbody tr td.club, .main_box #orderList .tbodyshort table.tbodyw tr td.club, .main_box #orderList .tbodylong table.tbody tr td.club, .main_box #orderList .tbodylong table.tbodyw tr td.club, .main_box #orderList .tbodyw table.tbody tr td.club, .main_box #orderList .tbodyw table.tbodyw tr td.club,
+    .main_box #orderShow .tbody table.tbody tr td.club,
+    .main_box #orderShow .tbody table.tbodyw tr td.club,
+    .main_box #orderShow .tbodyshort table.tbody tr td.club,
+    .main_box #orderShow .tbodyshort table.tbodyw tr td.club,
+    .main_box #orderShow .tbodylong table.tbody tr td.club,
+    .main_box #orderShow .tbodylong table.tbodyw tr td.club,
+    .main_box #orderShow .tbodyw table.tbody tr td.club,
+    .main_box #orderShow .tbodyw table.tbodyw tr td.club, .main_box #expShow .tbody table.tbody tr td.club, .main_box #expShow .tbody table.tbodyw tr td.club, .main_box #expShow .tbodyshort table.tbody tr td.club, .main_box #expShow .tbodyshort table.tbodyw tr td.club, .main_box #expShow .tbodylong table.tbody tr td.club, .main_box #expShow .tbodylong table.tbodyw tr td.club, .main_box #expShow .tbodyw table.tbody tr td.club, .main_box #expShow .tbodyw table.tbodyw tr td.club, .main_box #orderInExShow .tbody table.tbody tr td.club, .main_box #orderInExShow .tbody table.tbodyw tr td.club, .main_box #orderInExShow .tbodyshort table.tbody tr td.club, .main_box #orderInExShow .tbodyshort table.tbodyw tr td.club, .main_box #orderInExShow .tbodylong table.tbody tr td.club, .main_box #orderInExShow .tbodylong table.tbodyw tr td.club, .main_box #orderInExShow .tbodyw table.tbody tr td.club, .main_box #orderInExShow .tbodyw table.tbodyw tr td.club {
+      width: 210px; }
+    .main_box #userList .tbody table.tbody tr td.date, .main_box #userList .tbody table.tbodyw tr td.date, .main_box #userList .tbodyshort table.tbody tr td.date, .main_box #userList .tbodyshort table.tbodyw tr td.date, .main_box #userList .tbodylong table.tbody tr td.date, .main_box #userList .tbodylong table.tbodyw tr td.date, .main_box #userList .tbodyw table.tbody tr td.date, .main_box #userList .tbodyw table.tbodyw tr td.date, .main_box #itemList .tbody table.tbody tr td.date, .main_box #itemList .tbody table.tbodyw tr td.date, .main_box #itemList .tbodyshort table.tbody tr td.date, .main_box #itemList .tbodyshort table.tbodyw tr td.date, .main_box #itemList .tbodylong table.tbody tr td.date, .main_box #itemList .tbodylong table.tbodyw tr td.date, .main_box #itemList .tbodyw table.tbody tr td.date, .main_box #itemList .tbodyw table.tbodyw tr td.date, .main_box #itemShortList .tbody table.tbody tr td.date, .main_box #itemShortList .tbody table.tbodyw tr td.date, .main_box #itemShortList .tbodyshort table.tbody tr td.date, .main_box #itemShortList .tbodyshort table.tbodyw tr td.date, .main_box #itemShortList .tbodylong table.tbody tr td.date, .main_box #itemShortList .tbodylong table.tbodyw tr td.date, .main_box #itemShortList .tbodyw table.tbody tr td.date, .main_box #itemShortList .tbodyw table.tbodyw tr td.date, .main_box #orderList .tbody table.tbody tr td.date, .main_box #orderList .tbody table.tbodyw tr td.date, .main_box #orderList .tbodyshort table.tbody tr td.date, .main_box #orderList .tbodyshort table.tbodyw tr td.date, .main_box #orderList .tbodylong table.tbody tr td.date, .main_box #orderList .tbodylong table.tbodyw tr td.date, .main_box #orderList .tbodyw table.tbody tr td.date, .main_box #orderList .tbodyw table.tbodyw tr td.date,
+    .main_box #orderShow .tbody table.tbody tr td.date,
+    .main_box #orderShow .tbody table.tbodyw tr td.date,
+    .main_box #orderShow .tbodyshort table.tbody tr td.date,
+    .main_box #orderShow .tbodyshort table.tbodyw tr td.date,
+    .main_box #orderShow .tbodylong table.tbody tr td.date,
+    .main_box #orderShow .tbodylong table.tbodyw tr td.date,
+    .main_box #orderShow .tbodyw table.tbody tr td.date,
+    .main_box #orderShow .tbodyw table.tbodyw tr td.date, .main_box #expShow .tbody table.tbody tr td.date, .main_box #expShow .tbody table.tbodyw tr td.date, .main_box #expShow .tbodyshort table.tbody tr td.date, .main_box #expShow .tbodyshort table.tbodyw tr td.date, .main_box #expShow .tbodylong table.tbody tr td.date, .main_box #expShow .tbodylong table.tbodyw tr td.date, .main_box #expShow .tbodyw table.tbody tr td.date, .main_box #expShow .tbodyw table.tbodyw tr td.date, .main_box #orderInExShow .tbody table.tbody tr td.date, .main_box #orderInExShow .tbody table.tbodyw tr td.date, .main_box #orderInExShow .tbodyshort table.tbody tr td.date, .main_box #orderInExShow .tbodyshort table.tbodyw tr td.date, .main_box #orderInExShow .tbodylong table.tbody tr td.date, .main_box #orderInExShow .tbodylong table.tbodyw tr td.date, .main_box #orderInExShow .tbodyw table.tbody tr td.date, .main_box #orderInExShow .tbodyw table.tbodyw tr td.date {
+      width: 140px; }
+    .main_box #userList .tbody table.tbody tr td.symbol, .main_box #userList .tbody table.tbodyw tr td.symbol, .main_box #userList .tbodyshort table.tbody tr td.symbol, .main_box #userList .tbodyshort table.tbodyw tr td.symbol, .main_box #userList .tbodylong table.tbody tr td.symbol, .main_box #userList .tbodylong table.tbodyw tr td.symbol, .main_box #userList .tbodyw table.tbody tr td.symbol, .main_box #userList .tbodyw table.tbodyw tr td.symbol, .main_box #itemList .tbody table.tbody tr td.symbol, .main_box #itemList .tbody table.tbodyw tr td.symbol, .main_box #itemList .tbodyshort table.tbody tr td.symbol, .main_box #itemList .tbodyshort table.tbodyw tr td.symbol, .main_box #itemList .tbodylong table.tbody tr td.symbol, .main_box #itemList .tbodylong table.tbodyw tr td.symbol, .main_box #itemList .tbodyw table.tbody tr td.symbol, .main_box #itemList .tbodyw table.tbodyw tr td.symbol, .main_box #itemShortList .tbody table.tbody tr td.symbol, .main_box #itemShortList .tbody table.tbodyw tr td.symbol, .main_box #itemShortList .tbodyshort table.tbody tr td.symbol, .main_box #itemShortList .tbodyshort table.tbodyw tr td.symbol, .main_box #itemShortList .tbodylong table.tbody tr td.symbol, .main_box #itemShortList .tbodylong table.tbodyw tr td.symbol, .main_box #itemShortList .tbodyw table.tbody tr td.symbol, .main_box #itemShortList .tbodyw table.tbodyw tr td.symbol, .main_box #orderList .tbody table.tbody tr td.symbol, .main_box #orderList .tbody table.tbodyw tr td.symbol, .main_box #orderList .tbodyshort table.tbody tr td.symbol, .main_box #orderList .tbodyshort table.tbodyw tr td.symbol, .main_box #orderList .tbodylong table.tbody tr td.symbol, .main_box #orderList .tbodylong table.tbodyw tr td.symbol, .main_box #orderList .tbodyw table.tbody tr td.symbol, .main_box #orderList .tbodyw table.tbodyw tr td.symbol,
+    .main_box #orderShow .tbody table.tbody tr td.symbol,
+    .main_box #orderShow .tbody table.tbodyw tr td.symbol,
+    .main_box #orderShow .tbodyshort table.tbody tr td.symbol,
+    .main_box #orderShow .tbodyshort table.tbodyw tr td.symbol,
+    .main_box #orderShow .tbodylong table.tbody tr td.symbol,
+    .main_box #orderShow .tbodylong table.tbodyw tr td.symbol,
+    .main_box #orderShow .tbodyw table.tbody tr td.symbol,
+    .main_box #orderShow .tbodyw table.tbodyw tr td.symbol, .main_box #expShow .tbody table.tbody tr td.symbol, .main_box #expShow .tbody table.tbodyw tr td.symbol, .main_box #expShow .tbodyshort table.tbody tr td.symbol, .main_box #expShow .tbodyshort table.tbodyw tr td.symbol, .main_box #expShow .tbodylong table.tbody tr td.symbol, .main_box #expShow .tbodylong table.tbodyw tr td.symbol, .main_box #expShow .tbodyw table.tbody tr td.symbol, .main_box #expShow .tbodyw table.tbodyw tr td.symbol, .main_box #orderInExShow .tbody table.tbody tr td.symbol, .main_box #orderInExShow .tbody table.tbodyw tr td.symbol, .main_box #orderInExShow .tbodyshort table.tbody tr td.symbol, .main_box #orderInExShow .tbodyshort table.tbodyw tr td.symbol, .main_box #orderInExShow .tbodylong table.tbody tr td.symbol, .main_box #orderInExShow .tbodylong table.tbodyw tr td.symbol, .main_box #orderInExShow .tbodyw table.tbody tr td.symbol, .main_box #orderInExShow .tbodyw table.tbodyw tr td.symbol {
+      width: 85px;
+      font-size: small;
+      text-align: center; }

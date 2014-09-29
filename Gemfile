@@ -20,7 +20,7 @@ gem 'compass'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails'
 gem 'rails-dev-tweaks'
-gem 'sprockets'
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 group :production do
