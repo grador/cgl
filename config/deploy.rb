@@ -2,7 +2,7 @@ require 'rvm/capistrano'
 require 'bundler/capistrano'
 set :ssh_options, {:forward_agent => true}
 set :rvm_type, :user
-set :rvm_ruby_string, "ruby 2.1.3@default"
+set :rvm_ruby_string, "ruby 2.1.3"
 set :application, "Cgl"
 set :domain, "callgoodluck.com"
 set :repository, "https://github.com/grador/cgl/"
@@ -17,7 +17,7 @@ set :scm_verbose, true
 set :rails_env, "production"
 set :branch, "master"
 set :deploy_to, "/var/www/callgoodluckcom"
-set :deploy_via, :remote_cache
+set :deploy_via, :copy
 set :keep_releases, 3
 # default_run_options[:pty] = true
 server "31.131.20.142", :web, :app, :db, :primary => true
