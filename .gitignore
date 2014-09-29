@@ -5,12 +5,9 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-/.bundle
 
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
@@ -23,6 +20,5 @@
 .idea/
 /node_modules/
 
-buffer_controller_spec.rb
 db/data.yml
 db/seeds.rb
