@@ -17,7 +17,7 @@
 # work files
 /public/bills/
 *~
-.idea/
+/.idea/
 /node_modules/
 
 db/data.yml

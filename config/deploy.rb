@@ -1,7 +1,7 @@
 require 'rvm/capistrano'
 require 'bundler/capistrano'
 set :ssh_options, {:forward_agent => true}
-set :rvm_type, :system
+set :rvm_type, :user
 set :rvm_ruby_string, "ruby 2.1.3@default"
 set :application, "Cgl"
 set :domain, "callgoodluck.com"
@@ -9,7 +9,7 @@ set :repository, "https://github.com/grador/cgl/"
 set :default_stage, "production"
 # set :stages, %w(production)
 set :use_sudo, false
-set :user, "root" # нужно предварительно создать юзера на сервере, юзать root"a не стоит
+set :user, "seraf" # нужно предварительно создать юзера на сервере, юзать root"a не стоит
 # set :group, "deployers"
 set :scm, :git
 set :normalize_asset_timestamps, false
@@ -25,41 +25,6 @@ server "31.131.20.142", :web, :app, :db, :primary => true
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-desc "Symlink shared config files"
-task :symlink_config_files do
-    run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
-end
-desc "Restart Passenger app"
-task :restart do
-    run "#{ try_sudo } touch #{ File.join(current_path, 'tmp', 'restart.txt') }"
-end
 
 # if you"re still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
-
-# If you are using Passenger mod_rails uncomment this:
-namespace :deploy do
-  task :start do ; end
-  task :stop do ; end
-  namespace :assets do
-    task :precompile, :roles => assets_role, :except => { :no_release => true } do
-      run <<-CMD.compact
-        cd -- #{latest_release.shellescape} &&
-        #{rake} RAILS_ENV=#{rails_env.to_s.shellescape} #{asset_env} assets:precompile
-      CMD
-    end
-  end
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "#{try_sudo} touch #{File.join(current_path,"tmp","restart.txt")}"
-  end
-#  after "deploy", "deploy:symlink_config_files"
-  after "deploy", "deploy:restart"
-# if you want to clean up old releases on each deploy uncomment this:
-  after "deploy", "deploy:cleanup"
-end
-
-after "deploy:update_code", :bundle_install
-desc "install the necessary prerequisites"
-task :bundle_install, :roles => :app do
-  run "cd #{release_path} && bundle install"
-end
