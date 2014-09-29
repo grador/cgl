@@ -30,4 +30,3 @@ Item.create([
     {name: 'Салфетка синяя', full: 'Салфетка махровая синяя 30-30', art: 'BLU-N-30-30', box: 100, num: 1, technic: nil},
     {name: 'Простыня махровая коричневая', full: 'Простыня махровая коричневая 175-175', art: 'BRO-B-175-175', box: 2, num: 1, technic: nil}
 ])
-User.create(email: 's@serafimov.ru', password: '7773', region: 1, name: 'Sergey S.', address: 'Thailand, Phuket, Soi Tokdum, 53/41', type_owner: 'admin')

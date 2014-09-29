@@ -22,3 +22,7 @@
 *~
 .idea/
 /node_modules/
+
+buffer_controller_spec.rb
+db/data.yml
+db/seeds.rb
