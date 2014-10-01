@@ -55,7 +55,7 @@ class User < ActiveRecord::Base
   end
 
   # Проверка пользователя на права
-  def is_(type = nil)
+  def is_(type)
     self.type_owner == type
   end
 

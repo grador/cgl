@@ -22,3 +22,8 @@
 
 db/data.yml
 db/seeds.rb
+
+app/models/slotereport.rb
+app/models/sendman.rb
+app/models/report.rb
+app/models/message.rb
