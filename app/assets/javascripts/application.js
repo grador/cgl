@@ -20,10 +20,12 @@ $(document).on('page:change', function ()
     var mot = $('#chword');
     var help = $('#help');
     var menu = $('.menu');
+    var foot = $('#footer');
 
     help.css('left', '10px');
     menu.css('left', '-220px');
     stick.css('left','-1px');
+    foot.css('bottom','0px');
 
     stick.bind('click', function(){
         if(mot.text() == 'ОТКРЫТЬ'){

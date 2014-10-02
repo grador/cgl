@@ -14,8 +14,6 @@
     <% if @orders.nil? || @orders.empty?  %>
         <h2>Нет в базе заказов на отгрузку по вашему маршруту!</h2>
     <% else%>
-      <% cache do %>
         <%= render partial: 'shared/expedition_header', locals: { orders: @orders, users_name: @users_name} %>
-      <% end %>
     <% end %>
 </div>

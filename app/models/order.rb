@@ -34,7 +34,7 @@ class Order < ActiveRecord::Base
     !self.delivered.nil? || (self.deliver_at - 1.day).past?
   end
 
-  def user_name(users_name)
+  def name_user(users_name)
     users_name.each { |i| return i[:name] if i[:id] == self.user_id} if users_name
     'Без имени'
   end

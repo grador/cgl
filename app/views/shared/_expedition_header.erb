@@ -19,7 +19,7 @@
           <% @orders.each do |i|%>
               <tr>
                 <td class="status"><%= i.id %></td>
-                <td class="full"><%= i.user_name(@users_name) %></td>
+                <td class="full"><%= i.name_user(@users_name) %></td>
                 <td class="art"><%= i.q_box %></td>
                 <td class="club"><%= i.updated_at %></td>
               </tr>

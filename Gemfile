@@ -16,7 +16,7 @@ gem 'sass-rails'
 gem 'sass'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
-gem 'compass'
+# gem 'compass'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails'
 gem 'rails-dev-tweaks'

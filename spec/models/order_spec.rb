@@ -62,12 +62,12 @@ describe Order do
           u.id = @ord.user_id + k
           k+=1
         end
-        expect(@ord.user_name(@usr)).to include('person')
+        expect(@ord.name_user(@usr)).to include('person')
       end
 
       it 'name: not present' do
         @ord.user_id = nil
-        expect(@ord.user_name(@usr)).to include('Без имени')
+        expect(@ord.name_user(@usr)).to include('Без имени')
       end
     end
   end
