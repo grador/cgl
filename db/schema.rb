@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140919015547) do
+ActiveRecord::Schema.define(version: 20141008024400) do
 
   create_table "expeditions", force: true do |t|
     t.integer  "user_id"
@@ -116,7 +116,7 @@ ActiveRecord::Schema.define(version: 20140919015547) do
   create_table "sendmen", force: true do |t|
     t.integer  "message_id"
     t.integer  "user_id"
-    t.integer  "receiver"
+    t.integer  "sender"
     t.string   "status"
     t.string   "comment"
     t.datetime "created_at"
@@ -130,6 +130,13 @@ ActiveRecord::Schema.define(version: 20140919015547) do
     t.integer  "q_box",      default: 0
     t.string   "satatus"
     t.string   "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "userlogins", force: true do |t|
+    t.integer  "user_id",    default: 0
+    t.string   "ip_addr"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -43,7 +43,8 @@ class ExpeditionsController < ApplicationController
         raise unless (@waybill = current_user.expeditions.create(expedition_params))
         raise unless current_user.update_orders_status(Date.today,@active_date)
         raise unless (@orders = current_user.take_orders_delivered(Date.today, @active_date).includes(:lots))
-        raise unless make_waybill_docs( @waybill, @orders) && current_user.email_shipping_docs(@waybill, @orders)
+        raise unless make_waybill_docs( @waybill, @orders)
+        raise unless current_user.email_shipping_docs(@waybill, @orders)
         flash[:notice] ='Отгрузка оформлена успешно!'
       rescue
         raise ActiveRecord::Rollback, flash[:notice] = 'Отгрузка не прошла! ' + ALERT_STRING

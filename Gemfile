@@ -14,6 +14,7 @@ gem 'yaml_db', github: 'jetthoughts/yaml_db', ref: 'fb4b6bd7e12de3cffa93e0a298a1
 # Use SCSS for stylesheets
 gem 'sass-rails'
 gem 'sass'
+gem 'haml-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 # gem 'compass'

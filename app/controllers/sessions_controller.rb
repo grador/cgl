@@ -5,6 +5,11 @@ class SessionsController < ApplicationController
 
   # Root URL, Вход через регистрацию
   def new
+    @missing_counter = Userlogin.new(user_id: 0, ip_addr: request.remote_ip).count_missing
+    unless @missing_counter.zero?
+      flash.now[:notice] = @missing_counter >= Q_MISSING_LOG ?
+          'Превышен лимит неудачных попыток, возвращайтесь через 5 минут.' :"Неверные имя или пароль! Осталось #{Q_MISSING_LOG - @missing_counter} попыток."
+    end
   end
 
   # Закрытие сессии
@@ -16,6 +21,7 @@ class SessionsController < ApplicationController
   # Аутентификация, создание сессии в случае если ОК и навигация согласно типа пользователя
   def create
     user = User.authenticate(params[:email], params[:password])
+    Userlogin.create_log(user,request.remote_ip)
     if user
       if user.is_active
         session[:user_id] = user.id
@@ -29,16 +35,15 @@ class SessionsController < ApplicationController
         when TESTER
           redirect_to users_path, :notice => 'Добро пожаловать! Потестируйте систему! Делайте что хотите, ничего испортить не получится.'
         else
-          flash[:notice] = 'Ваш статус неизвестен! Обратитесь к Администратору.'
-          render 'new'
+          flsh('Ваш статус неизвестен! Обратитесь к Администратору.')
+          go_to_root
         end
       else
-        flash[:notice] = 'Ваш доступ заблокирован! Обратитесь к Администратору.'
-        render 'new'
+        flsh('Ваш доступ заблокирован! Обратитесь к Администратору.')
+        go_to_root
       end
     else
-      flash[:notice] = 'Неверный адрес почты или пароль!'
-      render 'new'
+      go_to_root
     end
   end
 

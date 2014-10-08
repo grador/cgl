@@ -17,6 +17,11 @@ class UsersController < ApplicationController
     respond_with @user
   end
 
+  def view
+    @log_sessions = Userlogin.all.order('id DESC')
+    respond_with @log_sessions
+  end
+
   def show
     respond_with @user
   end

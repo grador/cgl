@@ -7,6 +7,7 @@
   <li class="<%=visible_for(ADMIN+TESTER)%>"><%= link_to 'Изделия', items_path %></li>
   <li class="<%=visible_for(ALL)%>"><%= link_to 'Отчеты', items_path %></li>
   <li class="<%=visible_for(ALL)%>"><%= link_to 'Сообщения', items_path %></li>
+  <li class="<%=visible_for(ADMIN+TESTER)%>"><%= link_to 'Логи сессий', action: 'view', controller: 'users' %></li>
   <li class="<%=visible_for(ADMIN+TESTER)%>"><%= link_to 'Админка', users_path %></li>
-  <li class="<%=visible_for(ALL)%>"><%= link_to 'Выход', new_session_path %></li>
+  <li class="<%=visible_for(ALL)%>"><%= link_to 'Выход', sessions_path %></li>
 </ul>

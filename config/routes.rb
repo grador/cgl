@@ -1,5 +1,23 @@
 Cgl::Application.routes.draw do
  
+  get 'reports/index'
+
+  get 'reports/show'
+
+  get 'reports/create'
+
+  get 'reports/update'
+
+  get 'sendmen/index'
+
+  get 'sendmen/show'
+
+  get 'sendmen/create'
+
+  get 'reports/new'
+
+  get 'sendmen/new'
+
   # get 'errors/new'
   get 'orders/new'
   get 'sessions/new'
@@ -8,9 +26,11 @@ Cgl::Application.routes.draw do
   root :to => 'sessions#new'
 
   resources :items
-  resources :users
   resources :sessions, only: [:new, :create, :index]
   resources(:expeditions) do
+    get :view, on: :collection
+  end
+  resources(:users) do
     get :view, on: :collection
   end
   resources(:orders) do

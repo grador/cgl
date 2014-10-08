@@ -13,7 +13,7 @@
       <span id="call"> ООО УДАЧА. <%= show_username %> </span>
     </div>
     <div id="main">
-      <% if current_user %>
+      <% if session[:user_id] %>
         <div class="main_nav">
           <p id="sticker">
             <span id="chword">ОТКРЫТЬ</span>
@@ -30,7 +30,8 @@
           </div>
           <%= render partial: 'shared/main_menu'%>
         </div>
-        <div class="main_box">
+      <% end %>
+      <div class="main_box">
           <div class="informer">
             <% flash.each do |name, msg| %>
                 <h2> <%= content_tag :div, msg, :id => "flash_#{name}" %></h2>
@@ -40,10 +41,7 @@
              <h2> У Вас <%= is_messages %> новых сообщений. </h2>
           <% end %>
           <%= yield %>
-        </div>
-      <% else %>
-          <%= yield %>
-      <% end %>
+      </div>
     </div>
     <div id="footer">grador.ru</div>
 </body>

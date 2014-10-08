@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def is_messages
-    return nil unless current_user
+    return nil unless session[:user_id]
     '5'
     # nil
   end

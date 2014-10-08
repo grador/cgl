@@ -20,15 +20,15 @@
 public/bills/
 node_modules/
 
-/config/database.yml
+#/config/database.yml
 db/data.yml
 db/seeds.rb
+db/cgl_dev.sql
 
 app/models/slotereport.rb
 app/models/sendman.rb
 app/models/report.rb
 app/models/message.rb
 
-db/cgl_dev.sql
 app/assets/stylesheets/application.css.css
 app/assets/stylesheets/application.css.css.map

@@ -1,0 +1,13 @@
+<% if @log_sessions.nil? %>
+    <b> Нет в базе логов сессий! </b>
+<% else %>
+    <h2>Раздел логи сессий. В базе: <%= @log_sessions.size %> записей.</h2>
+    <div id="itemList">
+      <div class="thead">
+        <%= render :partial => 'shared/logs_head'%>
+      </div>
+      <div class="tbodyshort">
+        <%= render :partial => 'shared/logs_body'%>
+      </div>
+    </div>
+<% end %>

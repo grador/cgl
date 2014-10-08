@@ -48,3 +48,6 @@
   Q_FIELD = 12
   TYPE_USER = [ADMIN, USER, EXPEDITOR, TESTER]
   VERB = { index:'GET', show:'GET', new:'GET', create:'POST', update:'PATCH', edit:'GET', destroy:'DELETE'}
+  MISSING_COUNTER = 0
+  Q_MISSING_LOG = 3
+  TIME_BLOCK_MIN = 5

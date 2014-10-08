@@ -16,6 +16,7 @@ set :normalize_asset_timestamps, false
 set :scm_verbose, true
 set :rails_env, "production"
 set :branch, "master"
+# set :deploy_to, "/var/www/callgoodluck"
 set :deploy_to, "/var/www/callgoodluckcom"
 set :deploy_via, :copy
 set :keep_releases, 3

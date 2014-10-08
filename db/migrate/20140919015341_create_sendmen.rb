@@ -3,8 +3,8 @@ class CreateSendmen < ActiveRecord::Migration
     create_table :sendmen do |t|
       t.references  :message
       t.references  :user
-      t.integer     :receiver, index: true
-      t.string      :status
+      t.integer     :sender, index: true
+      t.string      :status, index: true
       t.string      :comment
       t.timestamps
     end

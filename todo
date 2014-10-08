@@ -75,6 +75,8 @@
 # использовать еще один уровень паршалов построчный стр.155
 
 
+devise, active admin, carrierwave Redis
+
 новое приложение
 postgresql
 https://github.com/sferik/rails_admin

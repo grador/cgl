@@ -10,7 +10,7 @@ class Cglmailer < ActionMailer::Base
 
   def docs_email(bill,user)
     mail.attachments[make_file_name(bill)] = File.read(make_url_name(bill))
-    mail(to: user[:email], cc: DEPOT_EMAIL, subject: "Накладная No #{make_bill_number(bill)} на получение товара").deliver && File.delete(url_name)
+    mail(to: user[:email], cc: DEPOT_EMAIL, subject: "Накладная No #{make_bill_number(bill)} на получение товара").deliver && File.delete(make_url_name(bill))
   end
 
 end
