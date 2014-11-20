@@ -52,7 +52,7 @@ class ApplicationController < ActionController::Base
 # before filter - готовит таблицу соответствия user_id => name
   def prepare_user_names
     # @users_name = User.where(id: @orders.map(&:user_id).uniq).select(:id,:name)
-    @users_name = User.all
+    @users_name = User.all.select(:id, :email, :region, :name, :address,:type_owner)
   end
 
   # Before filter - Проверка прав доступв

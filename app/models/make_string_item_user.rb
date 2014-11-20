@@ -8,4 +8,5 @@ module MakeStringItemUser
   def name_action
     self.is_active ? 'Удалить':'Вернуть'
   end
+
 end

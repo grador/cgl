@@ -29,6 +29,7 @@ class User < ActiveRecord::Base
 
   # Модуль интерпретаторов данных для некоторых классов
   include MakeStringItemUser
+  include MakeString
 
   # Без коментариев: http://rubygems.org/gems/bcrypt-ruby
   def self.authenticate(email, password)

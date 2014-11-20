@@ -1,0 +1,11 @@
+<table class="tbody">
+  <% @log_sessions.each do |i|%>
+      <tr>
+        <td class="status"><%= i.id %></td>
+        <td class="art"><%= i.user_id %></td>
+        <td class="name"><%= i.name_user(@users_name) %></td>
+        <td class="full"><%= i.created_at %></td>
+        <td class="art"><%= i.ip_addr %></td>
+      </tr>
+  <% end %>
+</table>

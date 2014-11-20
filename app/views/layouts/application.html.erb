@@ -9,7 +9,7 @@
 </head>
 <body>
     <div id="top">
-      <span id="cgl"> www.callgoodluck.ru </span>
+      <span id="cgl"> <%= link_to 'callgoodluck.ru', 'http://callgoodluck.ru'%> </span>
       <span id="call"> ООО УДАЧА. <%= show_username %> </span>
     </div>
     <div id="main">
@@ -37,12 +37,12 @@
                 <h2> <%= content_tag :div, msg, :id => "flash_#{name}" %></h2>
             <% end %>
           </div>
-          <% if is_messages %>
-             <h2> У Вас <%= is_messages %> новых сообщений. </h2>
+          <% if is_messages > 0 %>
+             <h2> <%= link_to "У Вас #{is_messages} новых сообщений.", action: 'view', controller: 'sendmen' %>  </h2>
           <% end %>
           <%= yield %>
       </div>
     </div>
-    <div id="footer">grador.ru</div>
+    <div id="footer"> <%= link_to 'serafimov.ru', 'http://serafimov.ru'%> </div>
 </body>
 </html>

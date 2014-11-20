@@ -33,6 +33,9 @@ Cgl::Application.routes.draw do
   resources(:users) do
     get :view, on: :collection
   end
+  resources(:sendmen) do
+    get :view, on: :collection
+  end
   resources(:orders) do
     get :copy, on: :member
   end

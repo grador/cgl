@@ -5,6 +5,7 @@ class Expedition < ActiveRecord::Base
   accepts_nested_attributes_for :loadups, allow_destroy: true
 
   include MakeStringOrderExpedition
+  include MakeString
   include SomeClassMethod
 
   def is_active

@@ -5,9 +5,8 @@ module ApplicationHelper
   end
 
   def is_messages
-    return nil unless session[:user_id]
-    '5'
-    # nil
+    return 0 unless session[:user_id]
+    Sendman.take_new_letters(current_user).size
   end
 
   def visible_for(name)

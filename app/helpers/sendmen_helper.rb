@@ -1,0 +1,2 @@
+module SendmenHelper
+end

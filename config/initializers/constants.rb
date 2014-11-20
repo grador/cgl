@@ -51,3 +51,5 @@
   MISSING_COUNTER = 0
   Q_MISSING_LOG = 3
   TIME_BLOCK_MIN = 5
+  NEW = 'new'
+  READED = 'readed'
