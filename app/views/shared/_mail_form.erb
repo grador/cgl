@@ -1,0 +1,53 @@
+<%= form_for @order do |o| %>
+    <% if action_name=='new'%>
+        <%= o.hidden_field(:user_id, :value => current_user[:id] ) %>
+        <%= o.hidden_field(:region, :value => current_user[:region] ) %>
+        <%= o.hidden_field(:q_box, :value => 0 ) %>
+    <% end %>
+    <div class="page_header">
+        Дата исполнения: <%= o.date_field( :deliver_at, :value => Date.tomorrow, min: Date.tomorrow, :max => Date.today + 7.days)%><br/>
+        Состав заказа:
+    </div>
+    <div class="page_nav">
+        <ul>
+        <% if action_name=='new'%>
+            <li class="button"><%= link_to'Отменить', orders_path%></li>
+        <% else %>
+            <li class="button"><%= link_to'Отменить', order_path(@order)%></li>
+        <% end %>
+        <li class="button"> <%= o.submit 'Сохранить заказ'%> </li>
+        </ul>
+    </div>
+    <div id="orderShow">
+       <%= render :partial => 'shared/order_head'%>
+       <div class="tbodylong">
+          <table>
+              <% k =0 %>
+              <% @lots.each do |i|%>
+                  <% if i.item %>
+                    <tr style="background-color: <%= i.item.bg_color %>">
+                        <td class="name"><%= i.item[:name] %></td>
+                        <td class="art"><%= i.item[:art] %></td>
+                        <td class="name"><%= i.item[:box] %></td>
+                        <td class="name">
+                          <%= o.fields_for 'lots_attributes', :index => k do |l|%>
+                              <% if i.item.is_active %>
+                                  <% if action_name =='edit' %>
+                                    <%= l.hidden_field(:id, :value=>i.id )  %>
+                                  <% end %>
+                                  <%= l.hidden_field(:item_id, :value=>i.item_id ) %>
+                                  <%= l.text_field :quantity, :value=> i.quantity, size: Q_FIELD  %>
+                              <% else %>
+                                  <% k-=1; %>
+                                  Недоступно
+                              <% end %>
+                          <% end %>
+                        </td>
+                    </tr>
+                    <% k+=1 %>
+                  <% end %>
+              <% end %>
+          </table>
+       </div>
+    </div>
+<%end%>
