@@ -25,6 +25,20 @@ server "31.131.20.142", :web, :app, :db, :primary => true
 
 # set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
+namespace :deploy do
+  desc "Symlink shared config files"
+  task :symlink_config_files do
+    run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
+  end
+  desc "Restart Passenger app"
+  task :restart do
+    run "#{ try_sudo } touch #{ File.join(current_path, 'tmp', 'restart.txt') }"
+  end
+  after "deploy", "deploy:symlink_config_files"
+  after "deploy", "deploy:restart"
+  after "deploy", "deploy:cleanup"
+end
+
 
 
 # if you"re still using the script/reaper helper you will need
