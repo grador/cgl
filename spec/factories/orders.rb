@@ -7,7 +7,7 @@ FactoryGirl.define do
     sequence(:deliver_at) {Date.today}
 
     factory :order_lot, class: Order do
-      ignore do
+      transient do
         lots_count 3
       end
 

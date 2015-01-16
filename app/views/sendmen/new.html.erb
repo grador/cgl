@@ -1,35 +1,39 @@
-%h1 Создайте сообщение
-= form_for :new_message do |m|
-  .page_header
-    %p
-      ='Заголовок:'
-      = m.text_area :name, cols: FULL_FIELD, rows: 1
-    %p
-      ='Текст сообщения:'
-      = m.text_area :body, cols: FULL_FIELD, rows: 6
-  .page_nav
-    %ul
-      %li.button
-        = link_to'Отменить', :back
-      %li.button
-        = m.submit 'Сохранить'
-  %div#userList
-    %div.thead
-      %table.thead
-        %tr
-    <td class="id"> No </td>
-    <td class="mail"> E-mail </td>
-    <td class="club"> Имя </td>
-    <td class="status"> Тип </td>
-    <td class="addr"> Адрес </td>
-    <td class="status"> Маршрут</td>
-    <td class="status"> Статус</td>
-    <td class="symbol"> <%= link_to 'Новый пользователь', new_user_path %></td>
-  </tr>
-</table>
-    %div.tbodyshort
+
+<%= form_for :message , url: sendmen_path do |m| %>
+    <h1>Создайте сообщение</h1>
+    <div class="page_header">
+    <p>Заголовок
+    <%= m.text_area(:name, value: @new_message.name, cols: FULL_FIELD, rows: 3)  %>
+    Текст сообщения
+    <%= m.text_area(:body, value: @new_message.body, cols: FULL_FIELD*2, rows: 5)  %></p>
+    <%= m.hidden_field(:status, :value=> NEW)  %>
+  </div>
+  <div class="page_nav">
+    <ul>
+      <li class="button"><%= link_to'Отменить', :back %></li>
+      <li class="button"> <%= m.submit 'Отправить сообщение'%> </li>
+    </ul>
+  </div>
+  <div id="userList" style="float: left">
+    <h1>Выберите получателя</h1>
+    <div class="thead">
+      <table class="thead">
+        <tr>
+        <td class="id"> No </td>
+        <td class="mail"> E-mail </td>
+        <td class="club"> Имя </td>
+        <td class="status"> Тип </td>
+        <td class="addr"> Адрес </td>
+        <td class="status"> Маршрут</td>
+        <td class="status"> Статус</td>
+        <td class="symbol"> Получатель</td>
+        </tr>
+      </table>
+    </div>
+    <div class="tbodyshort">
       <table class="tbody">
-          <% @users.each do |u|%>
+        <% k =0 %>
+        <% @users_name.each do |u|%>
           <tr>
             <td class="id"><%= u.id %></td>
             <td class="mail"><%= u.email %></td>
@@ -38,6 +42,18 @@
             <td class="addr"><%= u.address %></td>
             <td class="status"><%= u.region %></td>
             <td class="status"><%= u.status %></td>
-            <td class="symbol"><%= link_to 'Просмотр', u %></td>
-          <% end %>
+            <td class="symbol">
+              <%= m.fields_for 'sendmen_attributes', :index => k do |l|%>
+                  <%= l.hidden_field(:user_id, :value=>u.id )  %>
+                  <%= l.hidden_field(:status, :value=> NEW )  %>
+                  <%= l.hidden_field(:comment, :value=> 'comment' )  %>
+                  <%= l.check_box :sender, {},"#{current_user.id}",'0'%>
+              <% end %>
+            </td>
+          </tr>
+          <% k+=1 %>
+        <% end %>
       </table>
+    </div>
+  </div>
+<% end %>

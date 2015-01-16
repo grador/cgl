@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def show_username
-    current_user ? "Сеанс: #{current_user.name}" :nil
+    current_user ? " Сеанс: #{current_user.name}" :nil
   end
 
   def is_messages

@@ -1,0 +1,11 @@
+<table class="tbody">
+  <% @out_letters.each do |u|%>
+      <tr>
+        <td class="id"><%= u.id %></td>
+        <td class="mail"><%= u.created_at %></td>
+        <td class="club"><%= u.name_user(@users_name) %></td>
+        <td class="full"><%= u.comment %></td>
+        <td class="status"><%= u.status %></td>
+        <td class="symbol"><%= link_to 'Просмотр', u %></td>
+  <% end %>
+</table>

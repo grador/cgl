@@ -37,10 +37,8 @@
   end
 
   def create
-    raise unless create_order_content
+    go_back(nil) unless create_order_content
     redirect_to orders_path, :notice => 'Новый заказ создан !'
-  rescue
-    go_back(nil)
   end
 
   def update
@@ -124,7 +122,7 @@
     par.each_value do |v|
       vq = v[:quantity]
       if vq != ''
-        l=vq.to_i
+        l = vq.to_i
         if vq[/^\s*\d*/]!=vq
           flsh(l < 0 ? 'Отрицательное количество!':'Ввели не число!' + ' Аккуратно повторите ввод данных.')
           return false

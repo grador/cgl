@@ -8,7 +8,7 @@ set :domain, "callgoodluck.com"
 set :repository, "https://github.com/grador/cgl/"
 set :default_stage, "production"
 # set :stages, %w(production)
-set :use_sudo, false
+# set :use_sudo, false
 set :user, "seraf" # нужно предварительно создать юзера на сервере, юзать root"a не стоит
 # set :group, "deployers"
 set :scm, :git
@@ -17,7 +17,7 @@ set :scm_verbose, true
 set :rails_env, "production"
 set :branch, "master"
 # set :deploy_to, "/var/www/callgoodluck"
-set :deploy_to, "/var/www/callgoodluckcom"
+set :deploy_to, "/var/www/callgoodluck"
 set :deploy_via, :copy
 set :keep_releases, 3
 # default_run_options[:pty] = true

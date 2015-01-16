@@ -6,10 +6,7 @@ class SessionsController < ApplicationController
   # Root URL, Вход через регистрацию
   def new
     @missing_counter = Userlogin.new(user_id: 0, ip_addr: request.remote_ip).count_missing
-    unless @missing_counter.zero?
-      flash.now[:notice] = @missing_counter >= Q_MISSING_LOG ?
-          'Превышен лимит неудачных попыток, возвращайтесь через 5 минут.' :"Неверные имя или пароль! Осталось #{Q_MISSING_LOG - @missing_counter} попыток."
-    end
+    flash.now[:notice] = make_message unless @missing_counter.zero?
   end
 
   # Закрытие сессии
@@ -54,5 +51,13 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
   end
 
+  def make_message
+    limit = Q_MISSING_LOG - @missing_counter
+      if limit > 0
+        "Неверные имя или пароль! Осталось #{limit} #{limit<2 ? 'попытка':'попытки'}."
+      else
+        'Превышен лимит неудачных попыток, возвращайтесь через 5 минут.'
+      end
+  end
 end
 

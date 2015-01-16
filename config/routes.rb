@@ -42,6 +42,7 @@ Cgl::Application.routes.draw do
   # Это должно быть последним
   post '*a', :to => 'sessions#new'
   get '*a', :to => 'sessions#new'
+  # match '*a', :to => 'sessions#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

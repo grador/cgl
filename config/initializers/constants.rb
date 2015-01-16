@@ -1,5 +1,6 @@
   ACTIVE = 1
   INACTIVE = 0
+  ZERO = 0
   TIME_X = 12
   ADMIN = 'admin'
   USER = 'user'
@@ -53,3 +54,5 @@
   TIME_BLOCK_MIN = 5
   NEW = 'new'
   READED = 'readed'
+  NAME_LENGTH = 100
+  BODY_LENGTH = 250

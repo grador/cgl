@@ -9,7 +9,6 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, :with => :go_to_root
   rescue_from ActiveRecord::RecordNotSaved, :with => :go_to_root
 
-
   before_action :require_login
   protect_from_forgery with: :exception
   helper_method :current_user
@@ -52,7 +51,7 @@ class ApplicationController < ActionController::Base
 # before filter - готовит таблицу соответствия user_id => name
   def prepare_user_names
     # @users_name = User.where(id: @orders.map(&:user_id).uniq).select(:id,:name)
-    @users_name = User.all.select(:id, :email, :region, :name, :address,:type_owner)
+    @users_name = User.all.select(:id, :email, :region, :name, :address,:type_owner, :defaults)
   end
 
   # Before filter - Проверка прав доступв

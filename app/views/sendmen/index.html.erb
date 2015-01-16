@@ -1,4 +1,26 @@
-%h1 Sendmen#index
-%p Find me in app/views/sendmen/index.html.haml
-
-
+<% if @in_letters.nil?  || @in_letters.empty? %>
+    <h1> Нет входящих сообщений! </h1>
+<% else %>
+    <h2>Входящие сообщения. Новых: <%= @in_letters.select{|s| s.status == NEW}.size %>, всего: <%= @in_letters.size %> сообщений.</h2>
+    <div id="userList">
+      <div class="thead">
+        <%= render :partial => 'shared/in_letters_head'%>
+      </div>
+      <div class="tbodyshort">
+        <%= render :partial => 'shared/in_letters_body'%>
+      </div>
+    </div>
+<% end %>
+<% if @out_letters.nil?  || @out_letters.empty? %>
+    <b> Нет отправленных сообщений! </b>
+<% else %>
+    <h2>Отправленные сообщения. Всего: <%= @out_letters.size %> сообщений.</h2>
+    <div id="itemList">
+      <div class="thead">
+        <%= render :partial => 'shared/out_letters_head'%>
+      </div>
+      <div class="tbodyshort">
+        <%= render :partial => 'shared/out_letters_body'%>
+      </div>
+    </div>
+<% end %>

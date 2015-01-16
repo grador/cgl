@@ -1,2 +1,27 @@
-%h1 Sendmen#show
-%p Find me in app/views/sendmen/show.html.haml
+<h1>Просмотр сообщения</h1>
+<table>
+  <tr>
+    <td class="formname">Заголовок:</td>
+    <td class="formfield"><%= @letter.comment %></td>
+  </tr>
+  <tr>
+    <td class="formname">Текст:</td>
+    <td class="formfield"><%= @message.body %></td>
+  </tr>
+  <tr>
+    <td class="formname">Отправитель:</td>
+    <td class="formfield"><%= @letter.name_sender(@users_name) %></td>
+  </tr>
+  <tr>
+    <td class="formname">Получатель:</td>
+    <td class="formfield"><%= @letter.name_user(@users_name) %></td>
+  </tr>
+  <tr>
+    <td class="formname">Дата отправки:</td>
+    <td class="formfield"><%= @letter.created_at %></td>
+  </tr>
+</table>
+<ul class="form_nav">
+  <li class="button"><%= link_to 'Назад', :back %></li>
+  <li class="button"><%= link_to'Написать ответ', sendmen_new_path %></li>
+</ul>

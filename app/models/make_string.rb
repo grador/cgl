@@ -5,4 +5,9 @@ module MakeString
     users_name.each { |i| return i[:name] if i[:id] == self.user_id} if users_name
     'Без имени'
   end
+
+  def name_sender(users_name)
+    users_name.each { |i| return i[:name] if i[:id] == self.sender} if users_name
+    'Без имени'
+  end
 end

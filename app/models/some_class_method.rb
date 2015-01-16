@@ -5,9 +5,9 @@ module SomeClassMethod
   end
 
   module FirstClassMethod
-    # администратор просматривает список заказов или отгрузок всех пользователей
+    # администратор просматривает список всех пользователей
     def get_for_user(user)
-      if user.is_(ADMIN) || user.is_(TESTER)
+      if user.is_(ADMIN)
         self.all
       else
         self.where(user_id: user.id)
