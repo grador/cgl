@@ -12,6 +12,7 @@ set :use_sudo, false
 set :user, "root" # нужно предварительно создать юзера на сервере, юзать root"a не стоит
 # set :group, "deployers"
 set :scm, :git
+set :rvm_type, :system
 set :normalize_asset_timestamps, false
 set :scm_verbose, true
 set :rails_env, "production"
