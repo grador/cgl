@@ -45,7 +45,7 @@ class ApplicationController < ActionController::Base
   private
 
   def go_to_root
-    redirect_to new_session_path
+    redirect_to new_session_url
   end
 
 # before filter - готовит таблицу соответствия user_id => name

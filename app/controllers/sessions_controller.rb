@@ -24,13 +24,13 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
         case user.type_owner
         when ADMIN
-           redirect_to users_path, :notice => 'Администратор на борту!'
+           redirect_to users_url, :notice => 'Администратор на борту!'
         when USER
-          redirect_to orders_path, :notice => 'Добро пожаловать! Мы рады, что Вы с нами!'
+          redirect_to orders_url, :notice => 'Добро пожаловать! Мы рады, что Вы с нами!'
         when EXPEDITOR
-          redirect_to expeditions_path, :notice => 'Экспедитор на борту!'
+          redirect_to expeditions_url, :notice => 'Экспедитор на борту!'
         when TESTER
-          redirect_to users_path, :notice => 'Добро пожаловать! Потестируйте систему! Делайте что хотите, ничего испортить не получится.'
+          redirect_to users_url, :notice => 'Добро пожаловать! Потестируйте систему! Делайте что хотите, ничего испортить не получится.'
         else
           flsh('Ваш статус неизвестен! Обратитесь к Администратору.')
           go_to_root
