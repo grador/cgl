@@ -1,42 +1,19 @@
 Cgl::Application.routes.draw do
  
-  get 'reports/index'
-
-  get 'reports/show'
-
-  get 'reports/create'
-
-  get 'reports/update'
-
-  get 'sendmen/index'
-
-  get 'sendmen/show'
-
-  get 'sendmen/create'
-
-  get 'reports/new'
-
-  get 'sendmen/new'
-
-  # get 'errors/new'
-  get 'orders/new'
-  get 'sessions/new'
-  get 'expeditions/new'
-
   root :to => 'sessions#new'
 
-  resources :items
+  resources :items, :reports, :errors
   resources :sessions, only: [:new, :create, :index]
-  resources(:expeditions) do
+  resources :expeditions, only: [:index, :new, :create] do
     get :view, on: :collection
   end
-  resources(:users) do
+  resources :users do
     get :view, on: :collection
   end
-  resources(:sendmen) do
+  resources :sendmen, only:[:index, :new, :show, :create] do
     get :view, on: :collection
   end
-  resources(:orders) do
+  resources :orders do
     get :copy, on: :member
   end
   # Это должно быть последним
