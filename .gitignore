@@ -25,10 +25,5 @@ db/data.yml
 db/seeds.rb
 db/cgl_dev.sql
 
-app/models/slotereport.rb
-app/models/sendman.rb
-app/models/report.rb
-app/models/message.rb
-
 app/assets/stylesheets/application.css.css
 app/assets/stylesheets/application.css.css.map

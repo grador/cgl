@@ -45,7 +45,7 @@ class ApplicationController < ActionController::Base
   private
 
   def go_to_root
-    redirect_to new_session_url
+    redirect_to new_session_path
   end
 
 # before filter - готовит таблицу соответствия user_id => name
@@ -61,21 +61,21 @@ class ApplicationController < ActionController::Base
 
   # Before filter - Проверка прав доступв
   def check_admin
-    redirect_to sessions_new_path unless current_user.is_(ADMIN) || current_user.is_(TESTER)
+    redirect_to new_session_path unless current_user.is_(ADMIN) || current_user.is_(TESTER)
   end
 
   # Before filter - Проверка прав доступв
   def check_expeditor
-    redirect_to sessions_new_path if current_user.is_(USER)
+    redirect_to new_session_path if current_user.is_(USER)
   end
 
   # Before filter - Проверка прав доступв
   def check_user
-    redirect_to sessions_new_path if current_user.is_(EXPEDITOR)
+    redirect_to new_session_path if current_user.is_(EXPEDITOR)
   end
 
   # before filter - защита несанкционированного доступа
   def require_login
-    redirect_to sessions_new_path unless current_user
+    redirect_to new_session_path unless current_user
   end
 end
