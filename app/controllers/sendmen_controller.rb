@@ -38,7 +38,8 @@ class SendmenController < ApplicationController
   def create
     go_back('Не удалось отправить сообщение!' + REPEAT_REQUEST) unless Message.create(message_params)
     MessageStore.clean
-    go_to('index','Сообщение отправлено!' )
+    redirect_to sendmen_path, notice: 'Сообщение отправлено!'
+    # go_to('index','Сообщение отправлено!' )
   end
 
   private

@@ -35,7 +35,7 @@ namespace :deploy do
   task :restart do
     run "#{ try_sudo } touch #{ File.join(current_path, 'tmp', 'restart.txt') }"
   end
-  after "deploy", "deploy:symlink_config_files"
+  before "deploy", "deploy:symlink_config_files"
   after "deploy", "deploy:restart"
   after "deploy", "deploy:cleanup"
 end

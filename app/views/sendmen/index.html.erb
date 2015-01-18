@@ -12,7 +12,9 @@
     </div>
 <% end %>
 <% if @out_letters.nil?  || @out_letters.empty? %>
-    <b> Нет отправленных сообщений! </b>
+    <h1> Нет отправленных сообщений! </h1>
+    <br/>
+    <%= link_to 'Создать сообщение', new_sendman_path %>
 <% else %>
     <h2>Отправленные сообщения. Всего: <%= @out_letters.size %> сообщений.</h2>
     <div id="itemList">
