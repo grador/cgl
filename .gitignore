@@ -10,8 +10,8 @@
 # Ignore the default SQLite database.
 
 # Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp/
+log/*.log
+tmp/
 
 # work files
 *~
@@ -20,10 +20,10 @@
 public/bills/
 node_modules/
 
-/config/database.yml
 db/data.yml
 db/seeds.rb
 db/cgl_dev.sql
 
 app/assets/stylesheets/application.css.css
 app/assets/stylesheets/application.css.css.map
+config/database.yml
