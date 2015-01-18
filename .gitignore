@@ -26,4 +26,4 @@ db/cgl_dev.sql
 
 app/assets/stylesheets/application.css.css
 app/assets/stylesheets/application.css.css.map
-config/database.yml
+#config/database.yml
