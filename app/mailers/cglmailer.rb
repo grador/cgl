@@ -5,7 +5,7 @@ class Cglmailer < ActionMailer::Base
 
 
   def welcome_email(user)
-    mail(to: user[:email], cc: ADMIN_EMAIL, subject: "Вы зарегистрированны на сайте #{FIRM_NAME}").deliver
+    mail(to: user[:email], cc: ADMIN_EMAIL, subject: "Вы зарегистрированы на сайте #{FIRM_NAME}").deliver
   end
 
   def docs_email(bill,user)

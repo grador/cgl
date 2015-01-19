@@ -41,7 +41,7 @@ class UsersController < ApplicationController
       end
       redirect_to users_path
     else
-      go_back('Пользователь не создан, проверьте введенные данные, возможно повторение E-mail или имени.')
+      go_back('Пользователь не создан, проверьте введенные данные, возможно повторение E-mail или имени.'+@user.errors.full_messages.to_s)
     end
   end
 

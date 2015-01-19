@@ -29,23 +29,15 @@ class ItemsController < ApplicationController
     @item=Item.create(lot_params)
     if @item.errors.empty?
       redirect_to item_path(@item),:notice => 'Изделие создано!'
-      # flsh('Изделие создано!')
-      # render 'show'
     else
-      redirect_to new_item_path, :notice => 'Данные неверные!'
-      # flsh('Данные неверные!')
-      # render 'new'
+      redirect_to new_item_path, :notice => 'Данные неверные!'+@item.errors.full_messages.to_s
     end
   end
 
   def update
     if @item.update_attributes(item_params)
       redirect_to item_path(@item), :notice => 'Изделие обновлено!'
-      # flsh('Изделие обновлено!')
-      # render 'show'
     else
-      # flsh('Данные неверные!')
-      # render 'edit'
       redirect_to edit_item_path, :notice =>'Данные неверные!'
     end
   end

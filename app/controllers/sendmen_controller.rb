@@ -36,14 +36,16 @@ class SendmenController < ApplicationController
   end
 #сохранение нового
   def create
-    go_back('Не удалось отправить сообщение!' + REPEAT_REQUEST) unless Message.create(message_params)
-    MessageStore.clean
-    redirect_to sendmen_path, notice: 'Сообщение отправлено!'
-    # go_to('index','Сообщение отправлено!' )
+    @message = Message.create(message_params)
+    if @message.errors.empty?
+      MessageStore.clean
+      redirect_to sendmen_url, notice: 'Сообщение отправлено!'
+    else
+      redirect_to new_sendman_path, :notice => 'Не удалось отправить сообщение!'+@message.errors.full_messages.to_s
+    end
   end
 
   private
-
   def take_new_letters
     @in_letters = Sendman.take_new_letters(current_user)
     go_back('Доступа к сообщениям нет!'+ REPEAT_REQUEST) unless @in_letters && @users_name
@@ -81,15 +83,18 @@ class SendmenController < ApplicationController
   end
 
   def check_addres(p)
+    k=0
     p[:message][:sendmen_attributes].each_value do |v|
-       if v[:sender] != '0'
-         v[:comment] = p[:message][:name]
-         return true
-       end
+       k+=1 if v[:sender] != '0'
+       v[:comment] = p[:message][:name]
     end
+    if k.zero?
       flsh('Необходимо выбрать получателя !')
       copy_params(p)
       false
+    else
+      true
+    end
   end
 
   def copy_params(p)

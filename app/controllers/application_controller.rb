@@ -23,7 +23,6 @@ class ApplicationController < ActionController::Base
     flash[:notice] = str if str
     action = 'index' unless action
     redirect_to action: action
-    # render action
   end
 
   # Навигатор назад, параметр строка сообщение

@@ -94,9 +94,11 @@
   # Все понятно из названия, без заморочек
   def create_order_content
     @order = current_user.orders.create(order_params)
-  rescue
-    flash[:notice] = 'Ошибка сохранения !'+ REPEAT_REQUEST
-    return false
+    unless @order.errors.empty?
+      flash[:notice] = 'Ошибка сохранения !'+@order.errors.full_messages.to_s
+      return false
+    end
+    true
   end
 
   # before filter - готовит состав заказа для использования
