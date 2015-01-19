@@ -1,6 +1,6 @@
 class Message < ActiveRecord::Base
-  validates_presence_of :name, length: { maximum: NAME_LENGTH }, on: :create
-  validates_presence_of :body, length: { maximum: BODY_LENGTH }, on: :create
+  validates_presence_of :name
+  validates_presence_of :body
 
   has_many :sendmen, dependent: :destroy
   accepts_nested_attributes_for :sendmen, allow_destroy: true

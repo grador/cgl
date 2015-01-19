@@ -1,5 +1,5 @@
 class Sendman < ActiveRecord::Base
-  validates :sender, numericality: { greather_than: 0 }, on: :create
+  validates :sender, numericality: { greather_than: 0 }
   validates_presence_of :user_id, :status
 
   belongs_to :message, autosave: true
