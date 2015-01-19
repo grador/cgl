@@ -6,8 +6,8 @@ class ApplicationController < ActionController::Base
   rescue_from ActionController::RenderError, :with => :go_to_root
   rescue_from ActionController::MethodNotAllowed, :with => :go_to_root
   # rescue_from ActionController::InvalidAuthenticityToken, :with => :go_to_root
-  rescue_from ActiveRecord::RecordNotFound, :with => :go_to_root
-  rescue_from ActiveRecord::RecordNotSaved, :with => :go_to_root
+  # rescue_from ActiveRecord::RecordNotFound, :with => :go_to_root
+  # rescue_from ActiveRecord::RecordNotSaved, :with => :go_to_root
 
   before_action :require_login
   protect_from_forgery with: :exception

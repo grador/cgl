@@ -44,7 +44,7 @@ class Item < ActiveRecord::Base
   # Изменение статуса изделия при удалении. Его самого и его пустой рамки.
   # Мы его не удаляем, а делаем нелоступным для выбора и наоборот.
   def change_item_status_in_lot
-    Lot.where(item_id: self.id, order_id: self.get_status_lot).first.update_attribute(:order_id, self.change_status_lot) && self.update_attribute(:num, self.change_status)
+    Lot.where(item_id: self.id, order_id: self.get_status_lot).first.update_column(:order_id, self.change_status_lot) && self.update_column(:num, self.change_status)
   end
 
   # Подсчет кол-ва коробок к отгрузке по позициям во всех заказах к отгрузке
