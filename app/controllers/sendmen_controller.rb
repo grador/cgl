@@ -6,7 +6,8 @@ class SendmenController < ApplicationController
   before_filter :take_in_letters, only: [:index]
   before_filter :take_out_letters, only: [:index]
   before_filter :check_message_content, only: [:create]
-  before_filter :take_new_letters, only: [:view]
+  before_filter :view_new_letters, only: [:view]
+  before_filter :view_all_letters, only: [:watch]
 
 # отображение всех входящих и исходящих писем с возможностью создать новое посмотреть
   def index
@@ -17,6 +18,10 @@ class SendmenController < ApplicationController
 # просмотр списка новых входящих сообщений
   def view
    respond_with @in_letters, @users_name
+  end
+
+  def watch
+    respond_with @all_letters, @users_name
   end
 
   def new
@@ -46,7 +51,13 @@ class SendmenController < ApplicationController
   end
 
   private
-  def take_new_letters
+  def view_all_letters
+    @all_letters = Sendman.take_letters_for_admin
+    go_back('Доступа к сообщениям нет!'+ REPEAT_REQUEST) unless @all_letters && @users_name
+    go_to('index', 'Нет сообщений !') if @all_letters.empty?
+  end
+
+  def view_new_letters
     @in_letters = Sendman.take_new_letters(current_user)
     go_back('Доступа к сообщениям нет!'+ REPEAT_REQUEST) unless @in_letters && @users_name
     go_to('index', 'Нет новых сообщений !') if @in_letters.empty?
@@ -109,7 +120,7 @@ class SendmenController < ApplicationController
 
   # before filter - готовит список сообщений по данному user
   def take_in_letters
-    @in_letters = Sendman.get_for_user(current_user).order('id DESC')
+    @in_letters = Sendman.where(user_id: current_user.id).order('id DESC')
   end
 
 # без коментариев

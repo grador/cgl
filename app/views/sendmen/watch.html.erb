@@ -1,0 +1,35 @@
+<% if @all_letters.nil? || @all_letters.empty? %>
+    <h1> Нет сообщений! </h1>
+<% else %>
+    <h2>Все сообщения. Всего: <%= @all_letters.size %> сообщений.</h2>
+    <div id="userList">
+      <div class="thead">
+        <table class="thead">
+          <tr>
+            <td class="id"> No </td>
+            <td class="club"> Дата </td>
+            <td class="mail"> Отправитель </td>
+            <td class="mail"> Получататель </td>
+            <td class="addr"> Заголовок </td>
+            <td class="status"> Статус</td>
+            <td class="symbol">  <%= link_to 'Создать сообщение', new_sendman_path %></td>
+          </tr>
+        </table>
+      </div>
+      <div class="tbodylong">
+        <table class="tbody">
+          <% @all_letters.each do |u|%>
+              <tr>
+                <td class="id"><%= u.id %></td>
+                <td class="club"><%= u.created_at %></td>
+                <td class="mail"><%= u.name_sender(@users_name) %></td>
+                <td class="mail"><%= u.name_user(@users_name) %></td>
+                <td class="addr"><%= u.comment %></td>
+                <td class="status"><%= u.status %></td>
+                <td class="symbol"><%= link_to 'Просмотр', u %></td>
+          <% end %>
+        </table>
+      </div>
+    </div>
+<% end %>
+<%= link_to'Отменить', sendmen_path %>

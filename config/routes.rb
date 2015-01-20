@@ -12,6 +12,7 @@ Cgl::Application.routes.draw do
   end
   resources :sendmen, only:[:index, :new, :show, :create] do
     get :view, on: :collection
+    get :watch, on: :collection
   end
   resources :orders do
     get :copy, on: :member

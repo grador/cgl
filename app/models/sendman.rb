@@ -9,11 +9,13 @@ class Sendman < ActiveRecord::Base
 
   # Модуль интерпретаторов данных для некоторых классов
   include MakeStringOrderExpedition
-  include SomeClassMethod
   include MakeString
 
-  def self.take_new_letters(user)
-    get_for_user(user).where(status: NEW).order('id DESC')
+  def self.take_letters_for_admin
+    all.order('id DESC')
   end
 
+  def self.take_new_letters(user)
+    where(user_id: user.id, status: NEW).order('id DESC')
+  end
 end
